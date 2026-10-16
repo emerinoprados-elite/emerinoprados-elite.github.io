@@ -325,9 +325,21 @@ ESTILO_GUIA = '''<style>
   .guia details{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:10px 14px;margin:8px 0}
   .guia summary{color:var(--texto);font-weight:700;cursor:pointer}
   .guia .migas{font-size:14px}.guia a{color:var(--amarillo)}
+  .guia .compartir{background:var(--grad);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;font-size:15px;cursor:pointer}
   .guia .relacion{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
   .guia .relacion a{text-decoration:none;border:1px solid var(--borde);border-radius:999px;padding:6px 12px;font-weight:700;font-size:14px;color:var(--texto)}
 </style>'''
+
+
+JS_COMPARTIR = '''<script>
+document.querySelectorAll(".guia .compartir").forEach(b => b.addEventListener("click", async () => {
+  const datos = { title: b.dataset.titulo, url: b.dataset.url };
+  try {
+    if (navigator.share) await navigator.share(datos);
+    else { await navigator.clipboard.writeText(datos.url); b.textContent = "✅ Enlace copiado"; }
+  } catch (e) {}
+}));
+</script>'''
 
 
 def guia_html(i):
@@ -349,10 +361,12 @@ def guia_html(i):
   <p class="ej">{e(g["ejemplo"])}</p>
   {video}
   {"<h3>Preguntas frecuentes</h3>" + faq if faq else ""}
+  <p><button type="button" class="compartir" data-url="{WEB}{i["archivo"]}" data-titulo="{e(i["seo_titulo"])}">📤 Compartir este simulador</button></p>
   <h3>Sigue practicando</h3>
   <div class="relacion">{rel}<a href="../juegos/">🏆 Juegos y retos</a><a href="../">🏠 Todas las secciones</a></div>
   <p>Simulador creado por <a href="../sobre-mi/">{AUTOR}</a>. Gratis, sin registro y sin cookies. Puedes usarlo en clase, en el taller o en casa.</p>
 </article>
+{JS_COMPARTIR}
 <!-- guia:fin -->'''
 
 
@@ -487,6 +501,18 @@ def manifest():
     escribir("manifest.webmanifest", json.dumps(m, indent=2, ensure_ascii=False) + "\n")
 
 
+def juego():
+    """Puntos y nombres del modo juego, sacados de contenido.json."""
+    js = (RAIZ / "assets" / "juego.js").read_text(encoding="utf-8")
+    con_reto = [i for i in ITEMS if i.get("reto")]
+    bloque = ("  // juego:inicio (lo rellena herramientas/generar.py desde contenido.json)\n"
+              f"  const PUNTOS = {json.dumps({i['id']: i.get('puntos', 10) for i in con_reto}, ensure_ascii=False)};\n"
+              f"  const NOMBRES = {json.dumps({i['id']: i.get('nombre_corto', i['titulo']) for i in con_reto}, ensure_ascii=False)};\n"
+              f"  const INSTRUMENTOS = {json.dumps([i['id'] for i in con_reto if i['seccion'] == 'instrumentos'])};\n"
+              "  // juego:fin")
+    escribir("assets/juego.js", re.sub(r"  // juego:inicio.*?// juego:fin", lambda m: bloque, js, flags=re.S))
+
+
 def service_worker():
     sw = (RAIZ / "sw.js").read_text(encoding="utf-8")
     paginas = [r[:-len("index.html")] if r.endswith("index.html") else r for r, _, _ in ESCRITOS]
@@ -522,5 +548,6 @@ if __name__ == "__main__":
     robots()
     llms()
     manifest()
+    juego()
     service_worker()
     print(f"Listo: {len(ESCRITOS)} páginas, sitemap.xml, robots.txt, llms.txt, llms-full.txt y sw.js actualizados.")

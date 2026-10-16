@@ -389,6 +389,7 @@
   .guia details{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:10px 14px;margin:8px 0}
   .guia summary{color:var(--texto);font-weight:700;cursor:pointer}
   .guia .migas{font-size:14px}.guia a{color:var(--amarillo)}
+  .guia .compartir{background:var(--grad);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;font-size:15px;cursor:pointer}
   .guia .relacion{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
   .guia .relacion a{text-decoration:none;border:1px solid var(--borde);border-radius:999px;padding:6px 12px;font-weight:700;font-size:14px;color:var(--texto)}
 </style>
@@ -402,10 +403,20 @@
   <p class="ej">Si el cero del nonio queda entre el 23 y el 24 de la regla fija, tienes 23 mm. Si en un nonio de 0,02 mm coincide la raya 17, son 17 × 0,02 = 0,34 mm. La medida es 23 + 0,34 = 23,34 mm.</p>
   
   <h3>Preguntas frecuentes</h3><details><summary>¿Qué es la apreciación de un calibre?</summary><p>Es la medida más pequeña que se puede leer con él. Se calcula dividiendo la división más pequeña de la regla fija (1 mm) entre el número de divisiones del nonio: 10 divisiones dan 0,1 mm, 20 dan 0,05 mm y 50 dan 0,02 mm.</p></details><details><summary>¿Por qué el nonio de 0,05 mm es más largo?</summary><p>Porque sus 20 divisiones ocupan 39 mm en lugar de 19 mm. Las rayas quedan más separadas y son más fáciles de leer, pero la apreciación es la misma: 0,05 mm.</p></details><details><summary>¿Qué pasa si ninguna raya coincide exactamente?</summary><p>Elige la que más se acerque. Si dudas entre dos rayas, la medida real está entre ambas y la apreciación del calibre no permite afinar más.</p></details>
+  <p><button type="button" class="compartir" data-url="https://emerinoprados-elite.github.io/instrumentos/calibre.html" data-titulo="Calibre pie de rey online: simulador para aprender a medir con nonio">📤 Compartir este simulador</button></p>
   <h3>Sigue practicando</h3>
   <div class="relacion"><a href="../instrumentos/micrometro-centesimal.html">🔩 Micrómetro centesimal (0,01 mm)</a><a href="../instrumentos/micrometro-milesimal.html">⚙️ Micrómetro milesimal (0,001 mm)</a><a href="../juegos/">🏆 Juegos y retos</a><a href="../">🏠 Todas las secciones</a></div>
   <p>Simulador creado por <a href="../sobre-mi/">Eduardo Merino</a>. Gratis, sin registro y sin cookies. Puedes usarlo en clase, en el taller o en casa.</p>
 </article>
+<script>
+document.querySelectorAll(".guia .compartir").forEach(b => b.addEventListener("click", async () => {
+  const datos = { title: b.dataset.titulo, url: b.dataset.url };
+  try {
+    if (navigator.share) await navigator.share(datos);
+    else { await navigator.clipboard.writeText(datos.url); b.textContent = "✅ Enlace copiado"; }
+  } catch (e) {}
+}));
+</script>
 <!-- guia:fin -->
 <footer>Simulador de <b>Eduardo Merino</b> · Mecánica y Electricidad · <i>La élite se construye día a día</i></footer>
 <div class="toast" id="toast"></div>

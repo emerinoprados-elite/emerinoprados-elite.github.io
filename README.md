@@ -25,7 +25,7 @@ El generador escribe el contenido directamente en el HTML (no depende de JavaScr
 - **Herramienta nueva**: copiar su HTML a la carpeta de su sección (por ejemplo `motor/ciclo-4-tiempos.html`), añadir su entrada en `items` con `seccion`, `seo_titulo`, `seo_descripcion` y `guia`, y ejecutar el generador. En el HTML de la herramienta se insertan dos bloques entre marcadores (`seo:inicio/fin` en la cabecera y `guia:inicio/fin` antes del `<footer>`); no editarlos a mano.
 - **Vídeo publicado**: rellenar `video` (URL) y `fecha_video` (AAAA-MM-DD) del item. Con ambos se añaden los datos estructurados del vídeo.
 - **Google Search Console / Bing**: pegar el código de verificación en `verificacion_google` / `verificacion_bing`.
-- Para que cuente en el modo juego, añadir el id y sus puntos en `assets/juego.js`.
+- Modo juego: los campos `reto`, `puntos` y `nombre_corto` del item; el generador los copia a `assets/juego.js`.
 
 ## Archivos para buscadores e IA (generados)
 

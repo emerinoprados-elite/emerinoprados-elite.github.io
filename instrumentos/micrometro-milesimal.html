@@ -423,6 +423,7 @@
   .guia details{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:10px 14px;margin:8px 0}
   .guia summary{color:var(--texto);font-weight:700;cursor:pointer}
   .guia .migas{font-size:14px}.guia a{color:var(--amarillo)}
+  .guia .compartir{background:var(--grad);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;font-size:15px;cursor:pointer}
   .guia .relacion{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
   .guia .relacion a{text-decoration:none;border:1px solid var(--borde);border-radius:999px;padding:6px 12px;font-weight:700;font-size:14px;color:var(--texto)}
 </style>
@@ -436,10 +437,20 @@
   <p class="ej">Si el cilindro marca 7,5 mm, el tambor 23 y coincide la raya 4 del nonio, la medida es 7,5 + 0,23 + 0,004 = 7,734 mm.</p>
   
   <h3>Preguntas frecuentes</h3><details><summary>¿Cuál es la diferencia entre un micrómetro centesimal y uno milesimal?</summary><p>El milesimal tiene además un nonio en el cilindro que divide cada centésima del tambor en diez partes, por lo que aprecia 0,001 mm en lugar de 0,01 mm.</p></details><details><summary>¿Cómo se lee el nonio del micrómetro?</summary><p>Se busca la única raya del nonio que coincide exactamente con una raya del tambor. Su número son las milésimas que hay que sumar a la lectura de cilindro y tambor.</p></details>
+  <p><button type="button" class="compartir" data-url="https://emerinoprados-elite.github.io/instrumentos/micrometro-milesimal.html" data-titulo="Micrómetro milesimal online: simulador con nonio de 0,001 mm">📤 Compartir este simulador</button></p>
   <h3>Sigue practicando</h3>
   <div class="relacion"><a href="../instrumentos/calibre.html">📏 Calibre (pie de rey)</a><a href="../instrumentos/micrometro-centesimal.html">🔩 Micrómetro centesimal (0,01 mm)</a><a href="../juegos/">🏆 Juegos y retos</a><a href="../">🏠 Todas las secciones</a></div>
   <p>Simulador creado por <a href="../sobre-mi/">Eduardo Merino</a>. Gratis, sin registro y sin cookies. Puedes usarlo en clase, en el taller o en casa.</p>
 </article>
+<script>
+document.querySelectorAll(".guia .compartir").forEach(b => b.addEventListener("click", async () => {
+  const datos = { title: b.dataset.titulo, url: b.dataset.url };
+  try {
+    if (navigator.share) await navigator.share(datos);
+    else { await navigator.clipboard.writeText(datos.url); b.textContent = "✅ Enlace copiado"; }
+  } catch (e) {}
+}));
+</script>
 <!-- guia:fin -->
 <footer>Simulador de <b>Eduardo Merino</b> · Mecánica y Electricidad · <i>La élite se construye día a día</i></footer>
 <div class="toast" id="toast"></div>

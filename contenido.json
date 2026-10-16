@@ -94,7 +94,9 @@
             "r": "Elige la que más se acerque. Si dudas entre dos rayas, la medida real está entre ambas y la apreciación del calibre no permite afinar más."
           }
         ]
-      }
+      },
+      "puntos": 10,
+      "nombre_corto": "Calibre"
     },
     {
       "id": "micrometro-centesimal",
@@ -135,7 +137,9 @@
             "r": "De 0 a 25 mm, como la mayoría de micrómetros de exteriores. Para piezas mayores se usan micrómetros de 25 a 50 mm, de 50 a 75 mm, etcétera."
           }
         ]
-      }
+      },
+      "puntos": 15,
+      "nombre_corto": "Micrómetro 0,01"
     },
     {
       "id": "micrometro-milesimal",
@@ -171,7 +175,9 @@
             "r": "Se busca la única raya del nonio que coincide exactamente con una raya del tambor. Su número son las milésimas que hay que sumar a la lectura de cilindro y tambor."
           }
         ]
-      }
+      },
+      "puntos": 20,
+      "nombre_corto": "Micrómetro 0,001"
     }
   ]
 }

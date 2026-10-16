@@ -431,6 +431,7 @@
   .guia details{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:10px 14px;margin:8px 0}
   .guia summary{color:var(--texto);font-weight:700;cursor:pointer}
   .guia .migas{font-size:14px}.guia a{color:var(--amarillo)}
+  .guia .compartir{background:var(--grad);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;font-size:15px;cursor:pointer}
   .guia .relacion{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
   .guia .relacion a{text-decoration:none;border:1px solid var(--borde);border-radius:999px;padding:6px 12px;font-weight:700;font-size:14px;color:var(--texto)}
 </style>
@@ -444,10 +445,20 @@
   <p class="ej">Si en el cilindro se ven 7 mm, asoma la raya del medio milímetro y el tambor marca 23, la medida es 7 + 0,5 + 0,23 = 7,73 mm.</p>
   
   <h3>Preguntas frecuentes</h3><details><summary>¿Para qué sirve la carraca del micrómetro?</summary><p>Limita la fuerza con la que el husillo aprieta la pieza. Si se aprieta con el tambor directamente, cada persona mide con una presión distinta y la lectura cambia.</p></details><details><summary>¿Cuál es el error más común al leer un micrómetro?</summary><p>Olvidar el medio milímetro. Si la raya inferior del cilindro ya ha aparecido, hay que sumar 0,5 mm a lo que marca el tambor.</p></details><details><summary>¿Qué rango mide este micrómetro?</summary><p>De 0 a 25 mm, como la mayoría de micrómetros de exteriores. Para piezas mayores se usan micrómetros de 25 a 50 mm, de 50 a 75 mm, etcétera.</p></details>
+  <p><button type="button" class="compartir" data-url="https://emerinoprados-elite.github.io/instrumentos/micrometro-centesimal.html" data-titulo="Micrómetro centesimal online: simulador para leer 0,01 mm">📤 Compartir este simulador</button></p>
   <h3>Sigue practicando</h3>
   <div class="relacion"><a href="../instrumentos/calibre.html">📏 Calibre (pie de rey)</a><a href="../instrumentos/micrometro-milesimal.html">⚙️ Micrómetro milesimal (0,001 mm)</a><a href="../juegos/">🏆 Juegos y retos</a><a href="../">🏠 Todas las secciones</a></div>
   <p>Simulador creado por <a href="../sobre-mi/">Eduardo Merino</a>. Gratis, sin registro y sin cookies. Puedes usarlo en clase, en el taller o en casa.</p>
 </article>
+<script>
+document.querySelectorAll(".guia .compartir").forEach(b => b.addEventListener("click", async () => {
+  const datos = { title: b.dataset.titulo, url: b.dataset.url };
+  try {
+    if (navigator.share) await navigator.share(datos);
+    else { await navigator.clipboard.writeText(datos.url); b.textContent = "✅ Enlace copiado"; }
+  } catch (e) {}
+}));
+</script>
 <!-- guia:fin -->
 <footer>Simulador de <b>Eduardo Merino</b> · Mecánica y Electricidad · <i>La élite se construye día a día</i></footer>
 <div class="toast" id="toast"></div>

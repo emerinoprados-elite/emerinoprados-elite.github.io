@@ -2,8 +2,11 @@
    Todo se guarda en este dispositivo (localStorage): sin cuentas ni datos personales. */
 (function () {
   const CLAVE = "em-progreso-v1";
-  const PUNTOS = { "calibre": 10, "micrometro-centesimal": 15, "micrometro-milesimal": 20 };
-  const NOMBRES = { "calibre": "Calibre", "micrometro-centesimal": "Micrómetro 0,01", "micrometro-milesimal": "Micrómetro 0,001" };
+  // juego:inicio (lo rellena herramientas/generar.py desde contenido.json)
+  const PUNTOS = {"calibre": 10, "micrometro-centesimal": 15, "micrometro-milesimal": 20};
+  const NOMBRES = {"calibre": "Calibre", "micrometro-centesimal": "Micrómetro 0,01", "micrometro-milesimal": "Micrómetro 0,001"};
+  const INSTRUMENTOS = ["calibre", "micrometro-centesimal", "micrometro-milesimal"];
+  // juego:fin
   const NIVELES = [
     { id: "aprendiz", nombre: "Aprendiz", desde: 0, icono: "🔧" },
     { id: "oficial", nombre: "Oficial", desde: 300, icono: "🛠️" },
@@ -18,7 +21,7 @@
     { id: "nonio", icono: "📏", nombre: "Maestro del nonio", texto: "25 aciertos con el calibre.", ok: p => ac(p, "calibre") >= 25 },
     { id: "centesima", icono: "🔩", nombre: "Centésima exacta", texto: "25 aciertos con el micrómetro centesimal.", ok: p => ac(p, "micrometro-centesimal") >= 25 },
     { id: "milesimal", icono: "⚙️", nombre: "Dominio del milesimal", texto: "25 aciertos con el micrómetro milesimal.", ok: p => ac(p, "micrometro-milesimal") >= 25 },
-    { id: "completo", icono: "🧰", nombre: "Caja completa", texto: "Acierta con los tres instrumentos.", ok: p => Object.keys(PUNTOS).every(id => ac(p, id) >= 1) },
+    { id: "completo", icono: "🧰", nombre: "Caja completa", texto: "Acierta con todos los instrumentos de medida.", ok: p => INSTRUMENTOS.every(id => ac(p, id) >= 1) },
     { id: "cien", icono: "💯", nombre: "Cien medidas", texto: "100 aciertos en total.", ok: p => p.aciertos >= 100 },
     { id: "dias3", icono: "📅", nombre: "Constancia", texto: "Practica 3 días seguidos.", ok: p => p.mejorRachaDias >= 3 },
     { id: "dias7", icono: "🗓️", nombre: "Una semana", texto: "Practica 7 días seguidos.", ok: p => p.mejorRachaDias >= 7 },
