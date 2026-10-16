@@ -5,7 +5,8 @@
   "verificacion_bing": "",
   "autor": {
     "nombre": "Eduardo Merino",
-    "descripcion": "Divulgador de mecánica y electricidad. En su canal de YouTube explica el taller paso a paso y en esta web publica simuladores interactivos gratuitos para practicar."
+    "descripcion": "Profesor técnico de Formación Profesional de Transporte y Mantenimiento de Vehículos en la Comunidad de Madrid, con 19 años de experiencia docente, formador para servicios oficiales de marcas de automóviles y con una larga trayectoria en reparación del automóvil.",
+    "cargo": "Profesor técnico de FP de Transporte y Mantenimiento de Vehículos"
   },
   "secciones": [
     {
@@ -80,9 +81,18 @@
         ],
         "ejemplo": "Si el cero del nonio queda entre el 23 y el 24 de la regla fija, tienes 23 mm. Si en un nonio de 0,02 mm coincide la raya 17, son 17 × 0,02 = 0,34 mm. La medida es 23 + 0,34 = 23,34 mm.",
         "preguntas": [
-          { "p": "¿Qué es la apreciación de un calibre?", "r": "Es la medida más pequeña que se puede leer con él. Se calcula dividiendo la división más pequeña de la regla fija (1 mm) entre el número de divisiones del nonio: 10 divisiones dan 0,1 mm, 20 dan 0,05 mm y 50 dan 0,02 mm." },
-          { "p": "¿Por qué el nonio de 0,05 mm es más largo?", "r": "Porque sus 20 divisiones ocupan 39 mm en lugar de 19 mm. Las rayas quedan más separadas y son más fáciles de leer, pero la apreciación es la misma: 0,05 mm." },
-          { "p": "¿Qué pasa si ninguna raya coincide exactamente?", "r": "Elige la que más se acerque. Si dudas entre dos rayas, la medida real está entre ambas y la apreciación del calibre no permite afinar más." }
+          {
+            "p": "¿Qué es la apreciación de un calibre?",
+            "r": "Es la medida más pequeña que se puede leer con él. Se calcula dividiendo la división más pequeña de la regla fija (1 mm) entre el número de divisiones del nonio: 10 divisiones dan 0,1 mm, 20 dan 0,05 mm y 50 dan 0,02 mm."
+          },
+          {
+            "p": "¿Por qué el nonio de 0,05 mm es más largo?",
+            "r": "Porque sus 20 divisiones ocupan 39 mm en lugar de 19 mm. Las rayas quedan más separadas y son más fáciles de leer, pero la apreciación es la misma: 0,05 mm."
+          },
+          {
+            "p": "¿Qué pasa si ninguna raya coincide exactamente?",
+            "r": "Elige la que más se acerque. Si dudas entre dos rayas, la medida real está entre ambas y la apreciación del calibre no permite afinar más."
+          }
         ]
       }
     },
@@ -112,9 +122,18 @@
         ],
         "ejemplo": "Si en el cilindro se ven 7 mm, asoma la raya del medio milímetro y el tambor marca 23, la medida es 7 + 0,5 + 0,23 = 7,73 mm.",
         "preguntas": [
-          { "p": "¿Para qué sirve la carraca del micrómetro?", "r": "Limita la fuerza con la que el husillo aprieta la pieza. Si se aprieta con el tambor directamente, cada persona mide con una presión distinta y la lectura cambia." },
-          { "p": "¿Cuál es el error más común al leer un micrómetro?", "r": "Olvidar el medio milímetro. Si la raya inferior del cilindro ya ha aparecido, hay que sumar 0,5 mm a lo que marca el tambor." },
-          { "p": "¿Qué rango mide este micrómetro?", "r": "De 0 a 25 mm, como la mayoría de micrómetros de exteriores. Para piezas mayores se usan micrómetros de 25 a 50 mm, de 50 a 75 mm, etcétera." }
+          {
+            "p": "¿Para qué sirve la carraca del micrómetro?",
+            "r": "Limita la fuerza con la que el husillo aprieta la pieza. Si se aprieta con el tambor directamente, cada persona mide con una presión distinta y la lectura cambia."
+          },
+          {
+            "p": "¿Cuál es el error más común al leer un micrómetro?",
+            "r": "Olvidar el medio milímetro. Si la raya inferior del cilindro ya ha aparecido, hay que sumar 0,5 mm a lo que marca el tambor."
+          },
+          {
+            "p": "¿Qué rango mide este micrómetro?",
+            "r": "De 0 a 25 mm, como la mayoría de micrómetros de exteriores. Para piezas mayores se usan micrómetros de 25 a 50 mm, de 50 a 75 mm, etcétera."
+          }
         ]
       }
     },
@@ -143,8 +162,14 @@
         ],
         "ejemplo": "Si el cilindro marca 7,5 mm, el tambor 23 y coincide la raya 4 del nonio, la medida es 7,5 + 0,23 + 0,004 = 7,734 mm.",
         "preguntas": [
-          { "p": "¿Cuál es la diferencia entre un micrómetro centesimal y uno milesimal?", "r": "El milesimal tiene además un nonio en el cilindro que divide cada centésima del tambor en diez partes, por lo que aprecia 0,001 mm en lugar de 0,01 mm." },
-          { "p": "¿Cómo se lee el nonio del micrómetro?", "r": "Se busca la única raya del nonio que coincide exactamente con una raya del tambor. Su número son las milésimas que hay que sumar a la lectura de cilindro y tambor." }
+          {
+            "p": "¿Cuál es la diferencia entre un micrómetro centesimal y uno milesimal?",
+            "r": "El milesimal tiene además un nonio en el cilindro que divide cada centésima del tambor en diez partes, por lo que aprecia 0,001 mm en lugar de 0,01 mm."
+          },
+          {
+            "p": "¿Cómo se lee el nonio del micrómetro?",
+            "r": "Se busca la única raya del nonio que coincide exactamente con una raya del tambor. Su número son las milésimas que hay que sumar a la lectura de cilindro y tambor."
+          }
         ]
       }
     }

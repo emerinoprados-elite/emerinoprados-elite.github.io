@@ -1,50 +1,50 @@
 {
  "index.html": {
-  "hash": "122718502f8c",
+  "hash": "b001ec566fc2",
   "fecha": "2026-10-16"
  },
  "instrumentos/index.html": {
-  "hash": "7b5f058dc3a1",
+  "hash": "b08a17d72b3d",
   "fecha": "2026-10-16"
  },
  "motor/index.html": {
-  "hash": "f1279d11a624",
+  "hash": "271d48f12284",
   "fecha": "2026-10-16"
  },
  "mecanica/index.html": {
-  "hash": "8a8d05642f86",
+  "hash": "daee597cc997",
   "fecha": "2026-10-16"
  },
  "electricidad/index.html": {
-  "hash": "f0065bb16548",
+  "hash": "5ac509191b50",
   "fecha": "2026-10-16"
  },
  "juegos/index.html": {
-  "hash": "37f884e04ce5",
+  "hash": "8769770e2c11",
   "fecha": "2026-10-16"
  },
  "videos/index.html": {
-  "hash": "19a83c221906",
+  "hash": "67b8e32cd011",
   "fecha": "2026-10-16"
  },
  "progreso/index.html": {
-  "hash": "c74eb8d4edc5",
+  "hash": "36e396b0d318",
   "fecha": "2026-10-16"
  },
  "sobre-mi/index.html": {
-  "hash": "baa07db56b43",
+  "hash": "0d5e075505cd",
   "fecha": "2026-10-16"
  },
  "instrumentos/calibre.html": {
-  "hash": "425cd9de6b06",
+  "hash": "82f2330df82f",
   "fecha": "2026-10-16"
  },
  "instrumentos/micrometro-centesimal.html": {
-  "hash": "505952321a73",
+  "hash": "015375bc1526",
   "fecha": "2026-10-16"
  },
  "instrumentos/micrometro-milesimal.html": {
-  "hash": "1e632d0a12b5",
+  "hash": "f6c00a888783",
   "fecha": "2026-10-16"
  }
 }
