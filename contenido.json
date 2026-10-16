@@ -1,0 +1,36 @@
+{
+  "web": "https://emerinoprados-elite.github.io/",
+  "canal": "https://www.youtube.com/channel/UCbV5IvL8QP6eIf52zjU3dcQ",
+  "items": [
+    {
+      "id": "calibre",
+      "titulo": "Calibre (pie de rey)",
+      "descripcion": "Mide con nonio de 0,1, 0,05 y 0,02 mm. Arrastra el cursor, usa las lupas y ponte a prueba con piezas al azar.",
+      "icono": "📏",
+      "archivo": "instrumentos/calibre.html",
+      "video": "",
+      "tema": "metrologia",
+      "nivel": 1
+    },
+    {
+      "id": "micrometro-centesimal",
+      "titulo": "Micrómetro centesimal (0,01 mm)",
+      "descripcion": "Gira el tambor, lee el cilindro y el tambor y comprueba tu lectura al centésimo de milímetro.",
+      "icono": "🔩",
+      "archivo": "instrumentos/micrometro-centesimal.html",
+      "video": "",
+      "tema": "metrologia",
+      "nivel": 2
+    },
+    {
+      "id": "micrometro-milesimal",
+      "titulo": "Micrómetro milesimal (0,001 mm)",
+      "descripcion": "El más fino: cilindro, tambor y nonio para leer la micra. Para cuando ya dominas el centesimal.",
+      "icono": "⚙️",
+      "archivo": "instrumentos/micrometro-milesimal.html",
+      "video": "",
+      "tema": "metrologia",
+      "nivel": 3
+    }
+  ]
+}
