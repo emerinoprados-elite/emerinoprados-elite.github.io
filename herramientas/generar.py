@@ -200,7 +200,7 @@ def portada():
     <div>
       <h1>Mecánica y electricidad <span class="grad">para practicar</span></h1>
       <p class="lema">«{LEMA}»</p>
-      <p>Soy {AUTOR}, profesor de FP de automoción y formador de marcas oficiales. En mi canal de YouTube explico mecánica, motor y electricidad paso a paso, y aquí tienes los simuladores interactivos de cada vídeo para practicar todo lo que quieras: calibre, micrómetro, motor de combustión y mucho más. Gratis, sin registro y desde el móvil en el taller o el ordenador en casa.</p>
+      <p>Simuladores interactivos del profesor {AUTOR} para practicar mecánica, motor y electricidad: calibre, micrómetro, motor de combustión y mucho más. Cada vídeo del canal tiene aquí su simulador para practicar todo lo que quieras. Gratis, sin registro y desde el móvil en el taller o el ordenador en casa.</p>
       <div class="botones">
         <a class="btn prim" href="instrumentos/">📏 Probar los instrumentos</a>
         {yt("yt", "Ver el canal")}
