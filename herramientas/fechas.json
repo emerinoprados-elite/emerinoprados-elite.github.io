@@ -1,0 +1,50 @@
+{
+ "index.html": {
+  "hash": "122718502f8c",
+  "fecha": "2026-10-16"
+ },
+ "instrumentos/index.html": {
+  "hash": "7b5f058dc3a1",
+  "fecha": "2026-10-16"
+ },
+ "motor/index.html": {
+  "hash": "f1279d11a624",
+  "fecha": "2026-10-16"
+ },
+ "mecanica/index.html": {
+  "hash": "8a8d05642f86",
+  "fecha": "2026-10-16"
+ },
+ "electricidad/index.html": {
+  "hash": "f0065bb16548",
+  "fecha": "2026-10-16"
+ },
+ "juegos/index.html": {
+  "hash": "37f884e04ce5",
+  "fecha": "2026-10-16"
+ },
+ "videos/index.html": {
+  "hash": "19a83c221906",
+  "fecha": "2026-10-16"
+ },
+ "progreso/index.html": {
+  "hash": "c74eb8d4edc5",
+  "fecha": "2026-10-16"
+ },
+ "sobre-mi/index.html": {
+  "hash": "5a3265368b37",
+  "fecha": "2026-10-16"
+ },
+ "instrumentos/calibre.html": {
+  "hash": "425cd9de6b06",
+  "fecha": "2026-10-16"
+ },
+ "instrumentos/micrometro-centesimal.html": {
+  "hash": "505952321a73",
+  "fecha": "2026-10-16"
+ },
+ "instrumentos/micrometro-milesimal.html": {
+  "hash": "1e632d0a12b5",
+  "fecha": "2026-10-16"
+ }
+}

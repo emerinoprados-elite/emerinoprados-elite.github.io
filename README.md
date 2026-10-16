@@ -1,4 +1,4 @@
-# Web de Eduardo Merino (fases 1 y 2)
+# Web de Eduardo Merino
 
 Web estática para GitHub Pages: HTML, CSS y JS propios, sin frameworks.
 
@@ -10,28 +10,23 @@ Web estática para GitHub Pages: HTML, CSS y JS propios, sin frameworks.
    - `"web"`: dirección final, por ejemplo `https://emerinoprados-elite.github.io/` (informativo).
 2. **`const WEB_PERSONAL = ""`** en cada archivo de `instrumentos/`: la misma dirección de la web. Hace que el instrumento, descargado como archivo suelto, siga enlazando con la web y su vídeo. Dentro de la web ya funciona aunque esté vacía.
 
-## Estructura
+## Cómo se actualiza
+
+Todo el texto de la web sale de **`contenido.json`** (secciones, herramientas, guías, vídeos). Tras cambiarlo:
 
 ```
-index.html                 Portada
-instrumentos/index.html    Catálogo (se genera desde contenido.json)
-instrumentos/*.html        Los tres instrumentos (cada uno funciona offline como archivo suelto)
-sobre-mi/index.html        Sobre mí, contacto y privacidad
-videos/index.html          Vídeos por tema (desde contenido.json)
-progreso/index.html        Modo juego: nivel, insignias, racha diaria, copia de seguridad
-manifest.webmanifest       App instalable (PWA)
-sw.js                      Funcionamiento sin conexión
-assets/                    Estilos, script común, logo (SVG y PNG) y marca de agua
-contenido.json             Fuente única de instrumentos, vídeos y canal
-404.html, .nojekyll        Para GitHub Pages
+python3 herramientas/og.py        # imágenes para compartir (solo si hay herramientas nuevas; necesita Pillow)
+python3 herramientas/generar.py   # regenera páginas, SEO, sitemap, robots, llms.txt y sw.js
 ```
 
-Para añadir un instrumento: copiar el HTML a `instrumentos/` y añadir su entrada en `contenido.json`.
+El generador escribe el contenido directamente en el HTML (no depende de JavaScript), así lo leen Google, Bing y los asistentes de IA.
 
-## Modo juego
+- **Secciones**: instrumentos, motor, mecánica, electricidad y juegos. Una sección sin herramientas sale como «En preparación» con `noindex` y no entra en el sitemap hasta que tenga contenido.
+- **Herramienta nueva**: copiar su HTML a la carpeta de su sección (por ejemplo `motor/ciclo-4-tiempos.html`), añadir su entrada en `items` con `seccion`, `seo_titulo`, `seo_descripcion` y `guia`, y ejecutar el generador. En el HTML de la herramienta se insertan dos bloques entre marcadores (`seo:inicio/fin` en la cabecera y `guia:inicio/fin` antes del `<footer>`); no editarlos a mano.
+- **Vídeo publicado**: rellenar `video` (URL) y `fecha_video` (AAAA-MM-DD) del item. Con ambos se añaden los datos estructurados del vídeo.
+- **Google Search Console / Bing**: pegar el código de verificación en `verificacion_google` / `verificacion_bing`.
+- Para que cuente en el modo juego, añadir el id y sus puntos en `assets/juego.js`.
 
-`assets/juego.js` guarda en `localStorage` (clave `em-progreso-v1`) los aciertos de los retos. Puntos por acierto: calibre 10, centesimal 15, milesimal 20, más premio cada 5 seguidos. Niveles: Aprendiz 0, Oficial 300, Maestro 1000, Élite 2500. Las insignias se definen en ese mismo archivo. Solo cuenta dentro de la web; el instrumento suelto funciona igual pero no guarda progreso.
+## Archivos para buscadores e IA (generados)
 
-## Al cambiar archivos
-
-Sube `VERSION` en `sw.js` (em-v1 → em-v2…) para que los móviles con la app instalada descarguen lo nuevo. Si añades una página, añádela también a `ARCHIVOS` en `sw.js`.
+`sitemap.xml`, `robots.txt` (abierto a buscadores y crawlers de IA), `llms.txt` (resumen para IA), `llms-full.txt` (texto completo de las guías), `assets/og/` (imágenes 1200×630) y datos schema.org en cada página. `herramientas/fechas.json` guarda la fecha real de cambio de cada página para el sitemap.

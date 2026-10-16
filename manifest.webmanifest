@@ -1,7 +1,7 @@
 {
   "name": "Eduardo Merino · Mecánica y electricidad",
   "short_name": "E. Merino",
-  "description": "Instrumentos de medida interactivos, ejercicios y vídeos de mecánica y electricidad. La élite se construye día a día.",
+  "description": "Simuladores interactivos de mecánica, motor y electricidad, con retos y vídeos. La élite se construye día a día.",
   "lang": "es",
   "id": "./",
   "start_url": "./",
@@ -10,17 +10,75 @@
   "orientation": "any",
   "background_color": "#14161B",
   "theme_color": "#14161B",
-  "categories": ["education"],
+  "categories": [
+    "education"
+  ],
   "icons": [
-    { "src": "assets/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "assets/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "assets/icono-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
-    { "src": "assets/icono-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "assets/icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icono-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icono-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "shortcuts": [
-    { "name": "Calibre", "url": "instrumentos/calibre.html", "icons": [{ "src": "assets/icono-192.png", "sizes": "192x192" }] },
-    { "name": "Micrómetro 0,01 mm", "url": "instrumentos/micrometro-centesimal.html", "icons": [{ "src": "assets/icono-192.png", "sizes": "192x192" }] },
-    { "name": "Micrómetro 0,001 mm", "url": "instrumentos/micrometro-milesimal.html", "icons": [{ "src": "assets/icono-192.png", "sizes": "192x192" }] },
-    { "name": "Mi progreso", "url": "progreso/", "icons": [{ "src": "assets/icono-192.png", "sizes": "192x192" }] }
+    {
+      "name": "Calibre",
+      "url": "instrumentos/calibre.html",
+      "icons": [
+        {
+          "src": "assets/icono-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Micrómetro centesimal",
+      "url": "instrumentos/micrometro-centesimal.html",
+      "icons": [
+        {
+          "src": "assets/icono-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Micrómetro milesimal",
+      "url": "instrumentos/micrometro-milesimal.html",
+      "icons": [
+        {
+          "src": "assets/icono-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Mi progreso",
+      "url": "progreso/",
+      "icons": [
+        {
+          "src": "assets/icono-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
   ]
 }

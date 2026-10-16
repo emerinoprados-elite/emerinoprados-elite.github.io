@@ -1,0 +1,41 @@
+  <section class="seccion" style="margin-top:4px">
+    <h1 class="titular">Mi <span class="grad">progreso</span></h1>
+    <p>Acierta los retos de los instrumentos para sumar puntos. Se guarda solo en este dispositivo, sin cuentas.</p>
+    <div class="resumen">
+      <div class="panel">
+        <div class="nivel"><span class="ico" id="nivelIcono">🔧</span><div><h2 id="nivelNombre">Aprendiz</h2><span class="pts"><span id="puntos">0</span> puntos</span></div></div>
+        <div class="barra"><i id="barra" style="width:0"></i></div>
+        <small id="siguiente" style="color:var(--texto2)"></small>
+      </div>
+      <div class="panel fuego">
+        <div class="n">🔥 <span id="rachaDias" style="font-size:54px;color:var(--texto)">0</span> <span id="diasTxt">días</span></div>
+        <div id="rachaTexto" style="color:var(--texto2);margin-top:6px"></div>
+        <small style="color:var(--texto2)">Mejor racha: <b id="mejorDias">0</b></small>
+      </div>
+    </div>
+    <div class="datos">
+      <div><b id="aciertos">0</b><small>aciertos</small></div>
+      <div><b id="precision">—</b><small>precisión</small></div>
+      <div><b id="mejorRacha">0</b><small>mejor racha seguida</small></div>
+    </div>
+  </section>
+  <section class="seccion">
+    <h2>Insignias <small id="cuentaIns" style="font-size:16px;color:var(--texto2)"></small></h2>
+    <div class="insignias" id="insignias"></div>
+  </section>
+  <section class="seccion">
+    <h2>Por instrumento</h2>
+    <div class="panel"><table><thead><tr><th>Instrumento</th><th>Aciertos</th><th>Precisión</th><th>Mejor racha</th></tr></thead><tbody id="tabla"></tbody></table></div>
+    <div class="botones" style="margin-top:16px"><a class="btn prim" href="../juegos/">📏 Ir a practicar</a></div>
+  </section>
+  <section class="seccion">
+    <h2>Copia de seguridad</h2>
+    <p>Como no hay cuentas, guarda tu progreso en un archivo para pasarlo a otro móvil u ordenador.</p>
+    <div class="botones">
+      <button class="btn" id="bExportar" type="button">💾 Guardar en un archivo</button>
+      <label class="btn" for="fImportar">📂 Cargar desde archivo</label>
+      <input type="file" id="fImportar" accept="application/json,.json">
+      <button class="btn" id="bBorrar" type="button">🗑️ Borrar progreso</button>
+    </div>
+    <div id="aviso" class="aviso-ok" hidden></div>
+  </section>
