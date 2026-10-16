@@ -30,3 +30,7 @@ El generador escribe el contenido directamente en el HTML (no depende de JavaScr
 ## Archivos para buscadores e IA (generados)
 
 `sitemap.xml`, `robots.txt` (abierto a buscadores y crawlers de IA), `llms.txt` (resumen para IA), `llms-full.txt` (texto completo de las guías), `assets/og/` (imágenes 1200×630) y datos schema.org en cada página. `herramientas/fechas.json` guarda la fecha real de cambio de cada página para el sitemap.
+
+## No borrar
+
+`google73cb5e869f519a07.html`: verificación de Google Search Console. Si se borra, Google deja de dar acceso a los datos de la web.
