@@ -70,8 +70,8 @@
       "titulo": "Vehículos híbridos",
       "icono": "🔌",
       "seo_titulo": "Vehículos híbridos: cómo funcionan HEV, MHEV y PHEV",
-      "resumen": "Tipos de híbridos (microhíbrido, híbrido ligero, híbrido completo y enchufable) y cómo reparten el trabajo motor térmico y eléctrico.",
-      "intro": "Cómo funcionan los vehículos híbridos: microhíbridos, híbridos ligeros de 48 V, híbridos completos y enchufables. Modos de funcionamiento, reparto de par entre el motor térmico y el eléctrico, recuperación de energía y diagnosis, con simuladores interactivos."
+      "resumen": "Tipos de híbridos (híbrido ligero o mild hybrid, híbrido completo y enchufable) y cómo reparten el trabajo motor térmico y eléctrico.",
+      "intro": "Cómo funcionan los vehículos híbridos: híbridos ligeros (mild hybrid, MHEV), híbridos completos (HEV) y enchufables (PHEV). Modos de funcionamiento, reparto de par entre el motor térmico y el eléctrico, recuperación de energía y diagnosis, con simuladores interactivos."
     },
     {
       "id": "adas",
