@@ -1,14 +1,14 @@
 /* Service worker: guarda la web para usarla sin conexión.
    VERSION y ARCHIVOS los actualiza herramientas/generar.py: así los móviles descargan lo nuevo. */
-const VERSION = "em-282d13ee";
+const VERSION = "em-35854da1";
 const ARCHIVOS = [
   "./", "instrumentos/", "motor/", "mecanica/",
-  "electricidad/", "juegos/", "videos/", "progreso/",
-  "sobre-mi/", "instrumentos/calibre.html", "instrumentos/micrometro-centesimal.html", "instrumentos/micrometro-milesimal.html",
-  "contenido.json", "manifest.webmanifest", "404.html", "assets/estilos.css",
-  "assets/web.js", "assets/juego.js", "assets/progreso.js", "assets/emblema.svg",
-  "assets/emblema-200.png", "assets/marca_agua.png", "assets/icono-192.png", "assets/icono-512.png",
-  "assets/apple-touch-icon.png"
+  "electricidad/", "electricos/", "hibridos/", "adas/",
+  "juegos/", "videos/", "progreso/", "sobre-mi/",
+  "instrumentos/calibre.html", "instrumentos/micrometro-centesimal.html", "instrumentos/micrometro-milesimal.html", "contenido.json",
+  "manifest.webmanifest", "404.html", "assets/estilos.css", "assets/web.js",
+  "assets/juego.js", "assets/progreso.js", "assets/emblema.svg", "assets/emblema-200.png",
+  "assets/marca_agua.png", "assets/icono-192.png", "assets/icono-512.png", "assets/apple-touch-icon.png"
 ];
 
 self.addEventListener("install", e => {

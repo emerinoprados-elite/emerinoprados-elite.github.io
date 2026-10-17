@@ -36,7 +36,7 @@ img{max-width:100%}
 .cab .logo b{display:block;font-size:20px;letter-spacing:1px;line-height:1.1}
 .cab .logo i{display:block;font-size:13px;color:var(--lema);font-weight:600}
 .cab nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.cab nav a{font-weight:700;font-size:15px;text-decoration:none;color:var(--texto2);padding:9px 14px;border-radius:999px;border:1px solid transparent}
+.cab nav a{font-weight:700;font-size:15px;text-decoration:none;color:var(--texto2);padding:8px 11px;border-radius:999px;border:1px solid transparent}
 .cab nav a:hover{color:var(--texto);border-color:var(--borde)}
 .cab nav a[aria-current="page"]{color:var(--texto);border-color:var(--naranja);background:var(--panel)}
 

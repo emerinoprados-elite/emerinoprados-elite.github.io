@@ -46,6 +46,33 @@
       "intro": "Electricidad explicada para entenderla y practicarla: uso del polímetro, ley de Ohm, circuitos en serie y en paralelo y electricidad del automóvil."
     },
     {
+      "id": "electricos",
+      "menu": "Eléctricos",
+      "titulo": "Vehículos eléctricos",
+      "icono": "🔋",
+      "seo_titulo": "Vehículo eléctrico: batería de alta tensión, motor y carga explicados",
+      "resumen": "Cómo funciona un vehículo eléctrico: batería de alta tensión, motor eléctrico, inversor, carga y seguridad en el taller.",
+      "intro": "El vehículo eléctrico explicado para el taller: batería de alta tensión, motor eléctrico, inversor y convertidor, sistemas de carga, freno regenerativo y las medidas de seguridad para trabajar con alta tensión. Aquí irán llegando los simuladores que acompañan a los vídeos del canal."
+    },
+    {
+      "id": "hibridos",
+      "menu": "Híbridos",
+      "titulo": "Vehículos híbridos",
+      "icono": "🔌",
+      "seo_titulo": "Vehículos híbridos: cómo funcionan HEV, MHEV y PHEV",
+      "resumen": "Tipos de híbridos (microhíbrido, híbrido ligero, híbrido completo y enchufable) y cómo reparten el trabajo motor térmico y eléctrico.",
+      "intro": "Cómo funcionan los vehículos híbridos: microhíbridos, híbridos ligeros de 48 V, híbridos completos y enchufables. Modos de funcionamiento, reparto de par entre el motor térmico y el eléctrico, recuperación de energía y diagnosis, con simuladores interactivos."
+    },
+    {
+      "id": "adas",
+      "menu": "ADAS",
+      "titulo": "Sistemas ADAS",
+      "icono": "📡",
+      "seo_titulo": "Sistemas ADAS: asistentes a la conducción y su calibración",
+      "resumen": "Sistemas avanzados de ayuda a la conducción: cámaras, radares y sensores, cómo funcionan y cómo se calibran en el taller.",
+      "intro": "Los sistemas avanzados de ayuda a la conducción (ADAS) explicados paso a paso: frenada de emergencia, control de crucero adaptativo, mantenimiento de carril, ángulo muerto y aparcamiento. Cómo trabajan sus cámaras, radares y sensores y por qué hay que calibrarlos tras una reparación."
+    },
+    {
       "id": "juegos",
       "menu": "Juegos",
       "titulo": "Juegos y retos",

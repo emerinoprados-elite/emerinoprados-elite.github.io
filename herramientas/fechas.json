@@ -1,50 +1,62 @@
 {
  "index.html": {
-  "hash": "6828c8d15be8",
-  "fecha": "2026-10-16"
+  "hash": "a1d4da5c636e",
+  "fecha": "2026-10-17"
  },
  "instrumentos/index.html": {
-  "hash": "b08a17d72b3d",
-  "fecha": "2026-10-16"
+  "hash": "e4967d543bc2",
+  "fecha": "2026-10-17"
  },
  "motor/index.html": {
-  "hash": "271d48f12284",
-  "fecha": "2026-10-16"
+  "hash": "f5db18cf336c",
+  "fecha": "2026-10-17"
  },
  "mecanica/index.html": {
-  "hash": "daee597cc997",
-  "fecha": "2026-10-16"
+  "hash": "dd0821be67d7",
+  "fecha": "2026-10-17"
  },
  "electricidad/index.html": {
-  "hash": "5ac509191b50",
-  "fecha": "2026-10-16"
+  "hash": "6030b3cc7f1a",
+  "fecha": "2026-10-17"
+ },
+ "electricos/index.html": {
+  "hash": "a5962f29afc1",
+  "fecha": "2026-10-17"
+ },
+ "hibridos/index.html": {
+  "hash": "e9654d926c03",
+  "fecha": "2026-10-17"
+ },
+ "adas/index.html": {
+  "hash": "8c6afaf14354",
+  "fecha": "2026-10-17"
  },
  "juegos/index.html": {
-  "hash": "8769770e2c11",
-  "fecha": "2026-10-16"
+  "hash": "828dc6fb089c",
+  "fecha": "2026-10-17"
  },
  "videos/index.html": {
-  "hash": "67b8e32cd011",
-  "fecha": "2026-10-16"
+  "hash": "e9c623842ccb",
+  "fecha": "2026-10-17"
  },
  "progreso/index.html": {
-  "hash": "36e396b0d318",
-  "fecha": "2026-10-16"
+  "hash": "f75c741ead8d",
+  "fecha": "2026-10-17"
  },
  "sobre-mi/index.html": {
-  "hash": "0d5e075505cd",
-  "fecha": "2026-10-16"
+  "hash": "120c1094121f",
+  "fecha": "2026-10-17"
  },
  "instrumentos/calibre.html": {
-  "hash": "d3280f52bec8",
-  "fecha": "2026-10-16"
+  "hash": "016724d39ace",
+  "fecha": "2026-10-17"
  },
  "instrumentos/micrometro-centesimal.html": {
-  "hash": "46e461f92761",
-  "fecha": "2026-10-16"
+  "hash": "133c76525761",
+  "fecha": "2026-10-17"
  },
  "instrumentos/micrometro-milesimal.html": {
-  "hash": "42ab1ac21c73",
-  "fecha": "2026-10-16"
+  "hash": "86b341867ab0",
+  "fecha": "2026-10-17"
  }
 }
