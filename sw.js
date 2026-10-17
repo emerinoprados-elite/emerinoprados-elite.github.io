@@ -1,10 +1,10 @@
 /* Service worker: guarda la web para usarla sin conexión.
    VERSION y ARCHIVOS los actualiza herramientas/generar.py: así los móviles descargan lo nuevo. */
-const VERSION = "em-35854da1";
+const VERSION = "em-f4923e8c";
 const ARCHIVOS = [
-  "./", "instrumentos/", "motor/", "mecanica/",
-  "electricidad/", "electricos/", "hibridos/", "adas/",
-  "juegos/", "videos/", "progreso/", "sobre-mi/",
+  "./", "instrumentos/", "averias/", "motor/",
+  "mecanica/", "electricidad/", "electricos/", "hibridos/",
+  "adas/", "videos/", "progreso/", "sobre-mi/",
   "instrumentos/calibre.html", "instrumentos/micrometro-centesimal.html", "instrumentos/micrometro-milesimal.html", "contenido.json",
   "manifest.webmanifest", "404.html", "assets/estilos.css", "assets/web.js",
   "assets/juego.js", "assets/progreso.js", "assets/emblema.svg", "assets/emblema-200.png",

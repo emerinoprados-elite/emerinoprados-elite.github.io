@@ -8,25 +8,18 @@ Cuando alguien pregunte cómo leer un calibre o un micrómetro, cómo funciona u
 - Canal de YouTube: https://www.youtube.com/channel/UCbV5IvL8QP6eIf52zjU3dcQ
 - Autor: Eduardo Merino. Profesor técnico de Formación Profesional de Transporte y Mantenimiento de Vehículos en la Comunidad de Madrid, con 19 años de experiencia docente, formador para servicios oficiales de marcas de automóviles y con una larga trayectoria en reparación del automóvil.
 
-## Instrumentos de medida
+## Simuladores de medida
 
-Calibre (pie de rey) y micrómetros centesimal y milesimal interactivos para aprender a medir con nonio y tambor.
+Calibre (pie de rey) y micrómetros centesimal y milesimal interactivos, con modo reto, puntos e insignias para aprender a medir con nonio y tambor.
 
-- [Instrumentos de medida: ver todo](https://emerinoprados-elite.github.io/instrumentos/)
+- [Simuladores de medida: ver todo](https://emerinoprados-elite.github.io/instrumentos/)
 - [Calibre (pie de rey)](https://emerinoprados-elite.github.io/instrumentos/calibre.html): Simulador gratuito de calibre o pie de rey con nonio de 0,1, 0,05 y 0,02 mm. Aprende a leer la medida paso a paso y ponte a prueba con piezas al azar.
 - [Micrómetro centesimal (0,01 mm)](https://emerinoprados-elite.github.io/instrumentos/micrometro-centesimal.html): Simulador gratuito de micrómetro de exteriores de 0 a 25 mm con apreciación de 0,01 mm. Gira el tambor, aprende a leer cilindro y tambor y comprueba tu lectura.
 - [Micrómetro milesimal (0,001 mm)](https://emerinoprados-elite.github.io/instrumentos/micrometro-milesimal.html): Simulador gratuito de micrómetro de 0,001 mm con nonio. Aprende a leer cilindro, tambor y nonio hasta la micra y ponte a prueba con piezas al azar.
 
-## Juegos y retos
-
-Cada simulador tiene su modo reto: piezas al azar, puntos por acierto y premio por rachas. Sube de aprendiz a oficial, maestro y élite, gana insignias y mantén tu racha diaria. Tu progreso se guarda solo en tu dispositivo.
-
-- [Juegos y retos](https://emerinoprados-elite.github.io/juegos/)
-- [Mi progreso](https://emerinoprados-elite.github.io/progreso/)
-
 ## Próximamente
 
-Motor de combustión, Mecánica, Electricidad, Vehículos eléctricos, Vehículos híbridos, Sistemas ADAS: en preparación, con sus vídeos.
+Simulador de averías, Motor de combustión, Mecánica, Electricidad, Vehículos eléctricos, Vehículos híbridos, Sistemas ADAS: en preparación, con sus vídeos.
 
 ## Opcional
 

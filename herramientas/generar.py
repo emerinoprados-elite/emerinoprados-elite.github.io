@@ -226,7 +226,7 @@ def portada():
       <h2>🏆 Juega y sube de nivel</h2>
       <p>Cada reto acertado suma puntos. Pasa de aprendiz a oficial, maestro y élite, gana insignias y mantén tu racha diaria.</p>
     </div>
-    <a class="btn prim" href="juegos/">Ver los juegos</a>
+    <a class="btn prim" href="progreso/">Ver mi progreso</a>
   </section>
 
   <section class="seccion texto">
@@ -262,7 +262,12 @@ def pagina_seccion(s):
     <a class="btn prim" href="../progreso/">Ver mi progreso</a>
   </section>'''
     if s["id"] == "instrumentos":
-        extra = '\n  <p class="aviso" style="margin-top:22px">📲 <b>Instálala en el móvil:</b> en Chrome, abre el menú ⋮ y pulsa «Añadir a pantalla de inicio» o «Instalar aplicación». Funciona también sin conexión.</p>'
+        extra = '''
+  <section class="franja">
+    <div><h2>🏆 Tu progreso</h2><p>Mira tu nivel, tus insignias y tu racha diaria. Se guarda solo en este dispositivo, sin cuentas.</p></div>
+    <a class="btn prim" href="../progreso/">Ver mi progreso</a>
+  </section>'''
+        extra += '\n  <p class="aviso" style="margin-top:22px">📲 <b>Instálala en el móvil:</b> en Chrome, abre el menú ⋮ y pulsa «Añadir a pantalla de inicio» o «Instalar aplicación». Funciona también sin conexión.</p>'
     cuerpo = f'''  <nav class="migas" aria-label="Estás en"><a href="../">Inicio</a> › <span>{e(s["titulo"])}</span></nav>
   <section class="seccion" style="margin-top:4px">
     <h1 class="titular">{s["icono"]} {e(s["titulo"])}</h1>
@@ -363,7 +368,7 @@ def guia_html(i):
   {"<h3>Preguntas frecuentes</h3>" + faq if faq else ""}
   <p><button type="button" class="compartir" data-url="{WEB}{i["archivo"]}" data-titulo="{e(i["seo_titulo"])}">📤 Compartir este simulador</button></p>
   <h3>Sigue practicando</h3>
-  <div class="relacion">{rel}<a href="../juegos/">🏆 Juegos y retos</a><a href="../">🏠 Todas las secciones</a></div>
+  <div class="relacion">{rel}<a href="../progreso/">🏆 Mi progreso</a><a href="../">🏠 Todas las secciones</a></div>
   <p>Simulador creado por <a href="../sobre-mi/">{AUTOR}</a>. Gratis, sin registro y sin cookies. Puedes usarlo en clase, en el taller o en casa.</p>
 </article>
 {JS_COMPARTIR}

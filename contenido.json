@@ -11,12 +11,21 @@
   "secciones": [
     {
       "id": "instrumentos",
-      "menu": "Instrumentos",
-      "titulo": "Instrumentos de medida",
+      "menu": "Medida",
+      "titulo": "Simuladores de medida",
       "icono": "📏",
       "seo_titulo": "Simuladores de calibre y micrómetro online gratis",
-      "resumen": "Calibre (pie de rey) y micrómetros centesimal y milesimal interactivos para aprender a medir con nonio y tambor.",
-      "intro": "Aprende metrología de taller con instrumentos que se mueven como los de verdad. Ábrelos, muévelos y lee la medida; cuando lo tengas claro, pasa al modo reto con piezas al azar. Todos funcionan gratis desde el móvil o el ordenador, sin registro y también sin conexión."
+      "resumen": "Calibre (pie de rey) y micrómetros centesimal y milesimal interactivos, con modo reto, puntos e insignias para aprender a medir con nonio y tambor.",
+      "intro": "Aprende metrología de taller con instrumentos que se mueven como los de verdad. Ábrelos, muévelos y lee la medida; cuando lo tengas claro, pasa al modo reto con piezas al azar, suma puntos, sube de nivel y gana insignias. Todos funcionan gratis desde el móvil o el ordenador, sin registro y también sin conexión."
+    },
+    {
+      "id": "averias",
+      "menu": "Averías",
+      "titulo": "Simulador de averías",
+      "icono": "🩺",
+      "seo_titulo": "Simulador de averías del automóvil: diagnóstico y comprobación paso a paso",
+      "resumen": "Simuladores de diagnóstico: verifica y comprueba averías del automóvil paso a paso con polímetro y esquemas, como en el taller.",
+      "intro": "Practica el diagnóstico como en el taller: un síntoma, un esquema y tus herramientas de medida. Comprueba tensiones, continuidad y componentes paso a paso hasta encontrar la avería, con puntuación según lo eficiente que sea tu diagnóstico."
     },
     {
       "id": "motor",
@@ -71,15 +80,6 @@
       "seo_titulo": "Sistemas ADAS: asistentes a la conducción y su calibración",
       "resumen": "Sistemas avanzados de ayuda a la conducción: cámaras, radares y sensores, cómo funcionan y cómo se calibran en el taller.",
       "intro": "Los sistemas avanzados de ayuda a la conducción (ADAS) explicados paso a paso: frenada de emergencia, control de crucero adaptativo, mantenimiento de carril, ángulo muerto y aparcamiento. Cómo trabajan sus cámaras, radares y sensores y por qué hay que calibrarlos tras una reparación."
-    },
-    {
-      "id": "juegos",
-      "menu": "Juegos",
-      "titulo": "Juegos y retos",
-      "icono": "🏆",
-      "seo_titulo": "Juegos y retos de mecánica y electricidad",
-      "resumen": "Retos con puntos, niveles, insignias y racha diaria para practicar mecánica y electricidad jugando.",
-      "intro": "Cada simulador tiene su modo reto: piezas al azar, puntos por acierto y premio por rachas. Sube de aprendiz a oficial, maestro y élite, gana insignias y mantén tu racha diaria. Tu progreso se guarda solo en tu dispositivo."
     }
   ],
   "items": [
