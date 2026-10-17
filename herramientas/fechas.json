@@ -1,66 +1,66 @@
 {
  "index.html": {
-  "hash": "bfcb5e69aedc",
+  "hash": "f9055c3dd867",
   "fecha": "2026-10-17"
  },
  "instrumentos/index.html": {
-  "hash": "90f67fcb1f91",
+  "hash": "fbbcde007c21",
   "fecha": "2026-10-17"
  },
  "averias/index.html": {
-  "hash": "290d48d4d336",
+  "hash": "8913ddee8313",
   "fecha": "2026-10-17"
  },
  "motor/index.html": {
-  "hash": "0e4ae87c642f",
+  "hash": "a40be43b2e99",
   "fecha": "2026-10-17"
  },
  "mecanica/index.html": {
-  "hash": "7bc7e8302596",
+  "hash": "394cfb9b7bf7",
   "fecha": "2026-10-17"
  },
  "electricidad/index.html": {
-  "hash": "6a03125efde1",
+  "hash": "2ae7f4c8dfc2",
   "fecha": "2026-10-17"
  },
  "electricos/index.html": {
-  "hash": "d5b3685e3cfe",
+  "hash": "d33d8cc08abc",
   "fecha": "2026-10-17"
  },
  "hibridos/index.html": {
-  "hash": "4fa3650a808b",
+  "hash": "d327f0724731",
   "fecha": "2026-10-17"
  },
  "adas/index.html": {
-  "hash": "77e8ddedf9f6",
+  "hash": "48f74eb69a71",
   "fecha": "2026-10-17"
  },
  "videos/index.html": {
-  "hash": "310a5883ad98",
+  "hash": "d9fc23659d26",
   "fecha": "2026-10-17"
  },
  "progreso/index.html": {
-  "hash": "873f68eae60d",
+  "hash": "dabc943929f2",
   "fecha": "2026-10-17"
  },
  "sobre-mi/index.html": {
-  "hash": "3b95ded2f229",
+  "hash": "2250cca9169c",
   "fecha": "2026-10-17"
  },
  "instrumentos/calibre.html": {
-  "hash": "9b4c02e665d4",
+  "hash": "c76a534afa78",
   "fecha": "2026-10-17"
  },
  "instrumentos/micrometro-centesimal.html": {
-  "hash": "399be8fa274c",
+  "hash": "f3bef6c06aad",
   "fecha": "2026-10-17"
  },
  "instrumentos/micrometro-milesimal.html": {
-  "hash": "782de9e1f71d",
+  "hash": "ce481f3a632f",
   "fecha": "2026-10-17"
  },
  "taller-motor/index.html": {
-  "hash": "2bf7bf3d610b",
+  "hash": "97d65d76f715",
   "fecha": "2026-10-17"
  }
 }

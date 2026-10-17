@@ -56,7 +56,7 @@ def imagen(titulo, sub, salida, icono=""):
 
 if __name__ == "__main__":
     og = RAIZ / "assets" / "og"
-    imagen("Simuladores de mecánica, motor y electricidad", "Practica gratis con los vídeos del canal", og / "web.png")
+    imagen("Simuladores de mecánica, motor y electricidad", "Practica con los vídeos del canal", og / "web.png")
     for i in D["items"]:
-        imagen(i["titulo"], "Simulador interactivo gratis · Aprende a leerlo paso a paso", og / f"{i['id']}.png")
+        imagen(i["titulo"], "Simulador interactivo · Aprende paso a paso", og / f"{i['id']}.png")
     print("Imágenes creadas en assets/og/")
