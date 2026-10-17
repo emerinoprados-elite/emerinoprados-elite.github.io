@@ -32,9 +32,9 @@
       "menu": "Motor",
       "titulo": "Motor de combustión",
       "icono": "🔥",
-      "seo_titulo": "Motor de combustión interactivo: cómo funciona el motor de 4 tiempos",
-      "resumen": "Cómo funciona un motor de combustión de cuatro tiempos: admisión, compresión, explosión y escape, con simuladores interactivos.",
-      "intro": "El motor de combustión explicado para verlo funcionar: ciclo de cuatro tiempos, distribución, pistón, biela y cigüeñal. Aquí irán llegando los simuladores interactivos que acompañan a los vídeos del canal."
+      "seo_titulo": "Motor de combustión interactivo: simulador de montaje y funcionamiento",
+      "resumen": "Cómo funciona y cómo se monta un motor de combustión: simulador de montaje pieza a pieza y ciclo de cuatro tiempos.",
+      "intro": "El motor de combustión para verlo y montarlo: un simulador de montaje pieza a pieza, en el orden correcto, y el ciclo de cuatro tiempos con pistón, biela, cigüeñal y distribución. Aquí irán llegando los simuladores que acompañan a los vídeos del canal."
     },
     {
       "id": "mecanica",
