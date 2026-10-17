@@ -249,11 +249,34 @@ def portada():
            cuerpo, "", grafo)
 
 
+def incrustado(i):
+    """App a pantalla completa metida en la página de su sección, con su guía debajo (texto que leen buscadores e IA)."""
+    g = i["guia"]
+    pasos = "".join(f"<li>{e(p)}</li>" for p in g.get("pasos", []))
+    faq = "".join(f"<details><summary>{e(q['p'])}</summary><p>{e(q['r'])}</p></details>" for q in g.get("preguntas", []))
+    return f'''<section class="seccion incrustado">
+    <h2>{i.get("icono", "")} {e(i["titulo"])}</h2>
+    <p>{e(i["descripcion"])}</p>
+    <div class="marco"><iframe src="../{i["archivo"]}" title="{e(i["titulo"])}" loading="lazy" allow="fullscreen"></iframe></div>
+    <div class="botones"><a class="btn prim" href="../{i["archivo"]}">⛶ Abrir a pantalla completa</a></div>
+  </section>
+  <section class="seccion texto guia-sec">
+    <h2>{e(i["titulo"])}: qué es y cómo se usa</h2>
+    <p>{e(g["que_es"])}</p>
+    <h3>Cómo se usa</h3>
+    <ol>{pasos}</ol>
+    {f'<h3>Ejemplo</h3><p class="ej">{e(g["ejemplo"])}</p>' if g.get("ejemplo") else ""}
+    {"<h3>Preguntas frecuentes</h3>" + faq if faq else ""}
+  </section>'''
+
+
 def pagina_seccion(s):
     items = items_de(s["id"])
     ruta = f'{s["id"]}/index.html'
     url = WEB + s["id"] + "/"
-    contenido = rejilla(items, "../", con_video=True) if items else proximamente(s)
+    apps = [i for i in items if i.get("pantalla_completa")]
+    resto = [i for i in items if not i.get("pantalla_completa")]
+    contenido = ("".join(incrustado(i) for i in apps) + (rejilla(resto, "../", con_video=True) if resto else "")) if items else proximamente(s)
     extra = ""
     if s["id"] == "juegos":
         extra = f'''
@@ -376,7 +399,8 @@ def guia_html(i):
 
 
 def procesar_herramienta(i):
-    ruta = RAIZ / i["archivo"]
+    fichero = i.get("fichero", i["archivo"])
+    ruta = RAIZ / fichero
     txt = ruta.read_text(encoding="utf-8")
     url = WEB + i["archivo"]
     s = SEC[i["seccion"]]
@@ -401,12 +425,13 @@ def procesar_herramienta(i):
         txt = re.sub(r"<!-- seo:inicio.*?<!-- seo:fin -->", lambda m: cabeza, txt, count=1, flags=re.S)
     else:
         txt = re.sub(r"<title>.*?</title>", lambda m: cabeza, txt, count=1, flags=re.S)
-    guia = guia_html(i)
-    if "<!-- guia:inicio" in txt:
-        txt = re.sub(r"<!-- guia:inicio.*?<!-- guia:fin -->", lambda m: guia, txt, count=1, flags=re.S)
-    else:
-        txt = txt.replace("<footer>", guia + "\n<footer>", 1)
-    escribir(i["archivo"], txt, url, True)
+    if not i.get("pantalla_completa"):   # las apps a pantalla completa llevan la guía en la página de su sección
+        guia = guia_html(i)
+        if "<!-- guia:inicio" in txt:
+            txt = re.sub(r"<!-- guia:inicio.*?<!-- guia:fin -->", lambda m: guia, txt, count=1, flags=re.S)
+        else:
+            txt = txt.replace("<footer>", guia + "\n<footer>", 1)
+    escribir(fichero, txt, url, True)
 
 
 # ---------- archivos para buscadores e IA ----------
@@ -465,7 +490,7 @@ def texto_item(i, completo):
     g = i["guia"]
     t = f"### {i['titulo']}\n\nURL: {WEB}{i['archivo']}\n\n{i['seo_descripcion']}\n\n{g['que_es']}\n\nCómo se lee:\n"
     t += "".join(f"{n + 1}. {p}\n" for n, p in enumerate(g.get("pasos", [])))
-    t += f"\nEjemplo: {g['ejemplo']}\n"
+    t += f"\nEjemplo: {g['ejemplo']}\n" if g.get("ejemplo") else ""
     for q in g.get("preguntas", []):
         t += f"\n**{q['p']}** {q['r']}\n"
     return t

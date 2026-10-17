@@ -205,6 +205,54 @@
       },
       "puntos": 20,
       "nombre_corto": "Micrómetro 0,001"
+    },
+    {
+      "id": "taller-motor",
+      "seccion": "motor",
+      "titulo": "Taller 3D del motor",
+      "seo_titulo": "Taller 3D del motor: despiece, montaje y averías del motor de combustión",
+      "seo_descripcion": "Simulador 3D gratuito del motor de combustión: explora sus 12 piezas, móntalo en el orden correcto y diagnostica averías reales de taller como la junta de culata o la correa de distribución.",
+      "descripcion": "Gira el motor en 3D, despiézalo, míralo por dentro con rayos X, móntalo en el orden correcto y resuelve averías de taller.",
+      "icono": "🔧",
+      "archivo": "taller-motor/",
+      "fichero": "taller-motor/index.html",
+      "pantalla_completa": true,
+      "boton": "Abrir el taller 3D",
+      "reto": false,
+      "video": "",
+      "fecha_video": "",
+      "nivel": 2,
+      "guia": {
+        "que_es": "El Taller 3D del motor es un simulador de un motor de combustión de cuatro cilindros en línea con doble árbol de levas (DOHC). Se ve funcionar el ciclo de cuatro tiempos en cada cilindro (admisión, compresión, explosión y escape) y se pueden estudiar sus 12 piezas principales: bloque, culata, junta de culata, cárter, cigüeñal, pistones, segmentos, bielas, volante de inercia, árbol de levas, válvulas y correa de distribución. De cada pieza explica qué hace, cómo es y qué precauciones de seguridad hay que tomar en el taller.",
+        "pasos": [
+          "Explorar: arrastra para girar el motor, pellizca para acercarlo y toca una pieza para ver su función, sus datos técnicos y los riesgos al manipularla. Usa Despiece para separar las piezas y Rayos X para ver el bloque por dentro.",
+          "Montar: monta el motor en el orden correcto. Primero el cigüeñal en sus apoyos de bancada, después el conjunto biela-pistón, la junta de culata, la culata con sus válvulas, el árbol de levas, la correa de distribución y el volante de inercia. Si eliges una pieza antes de tiempo, el simulador explica por qué no toca todavía.",
+          "Averías: lee el síntoma, por ejemplo burbujas en el vaso de expansión o aceite con aspecto de barro, y señala la pieza responsable. Cada caso trae una pista y la explicación del diagnóstico.",
+          "Gana experiencia con cada pieza descubierta, cada montaje y cada avería resuelta, y sube de aprendiz a jefe de taller."
+        ],
+        "preguntas": [
+          {
+            "p": "¿Qué indica que salgan burbujas en el vaso de expansión?",
+            "r": "Que la compresión de los cilindros pasa al circuito de refrigeración. La causa típica es la junta de culata dañada o una culata rajada; además, las bujías suelen salir con restos blancos porque se quema refrigerante."
+          },
+          {
+            "p": "¿Por qué el aceite sale con aspecto de barro o mayonesa?",
+            "r": "Porque se ha mezclado con el líquido refrigerante. Lo más habitual es que la junta de culata esté dañada o que la culata esté rajada."
+          },
+          {
+            "p": "¿Qué pasa si se rompe la correa de distribución?",
+            "r": "El cigüeñal deja de mover el árbol de levas y el motor se para. En muchos motores, además, los pistones golpean las válvulas abiertas y las doblan."
+          },
+          {
+            "p": "¿Cuál es la ovalización máxima de un cilindro?",
+            "r": "Como referencia, la ovalización y la conicidad no deben pasar de 0,10 a 0,20 mm sobre el diámetro original. Si se supera, hay que rectificar los cilindros a sobremedida o encamisar, y terminar con el honeado."
+          },
+          {
+            "p": "¿En qué orden se monta un motor?",
+            "r": "Cigüeñal, conjunto biela-pistón, cárter y junta de culata; la culata se monta con las válvulas ya colocadas, después el árbol de levas y la correa de distribución, que necesita el cigüeñal y el árbol de levas ya montados. El volante de inercia se atornilla al extremo del cigüeñal."
+          }
+        ]
+      }
     }
   ]
 }

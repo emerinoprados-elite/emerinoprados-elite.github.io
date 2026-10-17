@@ -141,3 +141,13 @@ a.tarjeta.sec:hover{transform:translateY(-3px);border-color:var(--naranja)}
   .cab nav::-webkit-scrollbar{display:none}
   .cab nav a{flex:none}
 }
+
+/* App a pantalla completa incrustada en su sección (por ejemplo, el taller 3D del motor) */
+.incrustado .marco{position:relative;width:100%;height:min(82vh,760px);border-radius:18px;overflow:hidden;border:1px solid var(--borde);box-shadow:var(--sombra);background:#0c181e;margin:6px 0 14px}
+.incrustado .marco iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.guia-sec h3{margin:20px 0 6px}
+.guia-sec ol{padding-left:22px;color:var(--texto2)}
+.guia-sec details{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:10px 14px;margin:8px 0}
+.guia-sec summary{font-weight:700;cursor:pointer}
+.guia-sec .ej{background:var(--panel);border-left:4px solid var(--naranja);border-radius:12px;padding:12px 14px}
+@media (max-width:760px){.incrustado .marco{height:78vh;border-radius:12px}}
