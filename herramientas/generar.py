@@ -179,7 +179,8 @@ def rejilla(items, r, con_video=False):
 
 
 def proximamente(s):
-    return f'''<div class="aviso proximo">🛠️ <b>En preparación.</b> Los simuladores de {e(s["titulo"].lower())} llegarán con los próximos vídeos del canal. Suscríbete para enterarte el primero.
+    texto = s.get("proximo") or f'Los simuladores de {e(s["titulo"].lower())} llegarán con los próximos vídeos del canal. Suscríbete para enterarte el primero.'
+    return f'''<div class="aviso proximo">🛠️ <b>En preparación.</b> {texto}
   <div class="botones" style="margin-top:12px">{yt("yt", "Ir al canal")}{yt("", "🔔 Suscríbete", "suscribir")}</div></div>'''
 
 
@@ -200,9 +201,10 @@ def portada():
     <div>
       <h1>Mecánica y electricidad <span class="grad">para practicar</span></h1>
       <p class="lema">«{LEMA}»</p>
-      <p>Simuladores interactivos del profesor {AUTOR} para practicar mecánica, motor y electricidad: calibre, micrómetro, motor de combustión, vehículos eléctricos e híbridos, sistemas ADAS y mucho más. Cada vídeo del canal tiene aquí su simulador para practicar todo lo que quieras. Sin registro y desde el móvil en el taller o el ordenador en casa.</p>
+      <p>Simuladores interactivos, vídeos explicativos y cursos online del profesor {AUTOR} para aprender mecánica, electricidad, vehículos eléctricos e híbridos y sistemas ADAS. Sin registro y desde el móvil en el taller o el ordenador en casa.</p>
       <div class="botones">
-        <a class="btn prim" href="instrumentos/">📏 Probar los instrumentos</a>
+        <a class="btn prim" href="instrumentos/">📏 Probar los simuladores</a>
+        <a class="btn" href="cursos/">🎓 Ver los cursos</a>
         {yt("yt", "Ver el canal")}
       </div>
     </div>

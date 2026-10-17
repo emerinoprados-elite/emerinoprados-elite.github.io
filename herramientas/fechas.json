@@ -1,50 +1,50 @@
 {
  "index.html": {
-  "hash": "f9055c3dd867",
+  "hash": "87829133023d",
+  "fecha": "2026-10-17"
+ },
+ "cursos/index.html": {
+  "hash": "ab381fa68c16",
   "fecha": "2026-10-17"
  },
  "instrumentos/index.html": {
-  "hash": "fbbcde007c21",
+  "hash": "8a3de9036e85",
   "fecha": "2026-10-17"
  },
  "averias/index.html": {
-  "hash": "8913ddee8313",
-  "fecha": "2026-10-17"
- },
- "motor/index.html": {
-  "hash": "a40be43b2e99",
+  "hash": "efde53e80776",
   "fecha": "2026-10-17"
  },
  "mecanica/index.html": {
-  "hash": "394cfb9b7bf7",
+  "hash": "99a419158202",
   "fecha": "2026-10-17"
  },
  "electricidad/index.html": {
-  "hash": "2ae7f4c8dfc2",
+  "hash": "d7f45e95e4bf",
   "fecha": "2026-10-17"
  },
  "electricos/index.html": {
-  "hash": "d33d8cc08abc",
+  "hash": "7341cc6348b5",
   "fecha": "2026-10-17"
  },
  "hibridos/index.html": {
-  "hash": "d327f0724731",
+  "hash": "7caaf3c54582",
   "fecha": "2026-10-17"
  },
  "adas/index.html": {
-  "hash": "48f74eb69a71",
+  "hash": "e95915d54bf3",
   "fecha": "2026-10-17"
  },
  "videos/index.html": {
-  "hash": "d9fc23659d26",
+  "hash": "673b1ff4224a",
   "fecha": "2026-10-17"
  },
  "progreso/index.html": {
-  "hash": "dabc943929f2",
+  "hash": "3c932d99ce36",
   "fecha": "2026-10-17"
  },
  "sobre-mi/index.html": {
-  "hash": "2250cca9169c",
+  "hash": "1c1070cd89ed",
   "fecha": "2026-10-17"
  },
  "instrumentos/calibre.html": {
@@ -60,7 +60,7 @@
   "fecha": "2026-10-17"
  },
  "taller-motor/index.html": {
-  "hash": "97d65d76f715",
+  "hash": "15759b20ff88",
   "fecha": "2026-10-17"
  }
 }

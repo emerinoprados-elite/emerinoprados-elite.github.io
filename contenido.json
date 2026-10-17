@@ -10,6 +10,16 @@
   },
   "secciones": [
     {
+      "id": "cursos",
+      "menu": "Cursos",
+      "titulo": "Cursos online",
+      "icono": "🎓",
+      "seo_titulo": "Cursos online de mecánica, electricidad y vehículos eléctricos",
+      "resumen": "Cursos online de mecánica, electricidad del automóvil, vehículos eléctricos, híbridos y ADAS, con documentación, simuladores, autoevaluación y seguimiento del progreso.",
+      "intro": "Cursos online completos para aprender mecánica y electricidad del automóvil paso a paso: vídeos explicativos, documentación descargable, simuladores interactivos para practicar, autoevaluación al final de cada tema y seguimiento de tu progreso.",
+      "proximo": "Los primeros cursos están en preparación. Suscríbete al canal para enterarte el primero cuando abran."
+    },
+    {
       "id": "instrumentos",
       "menu": "Medida",
       "titulo": "Simuladores de medida",
@@ -28,22 +38,13 @@
       "intro": "Practica el diagnóstico como en el taller: un síntoma, un esquema y tus herramientas de medida. Comprueba tensiones, continuidad y componentes paso a paso hasta encontrar la avería, con puntuación según lo eficiente que sea tu diagnóstico."
     },
     {
-      "id": "motor",
-      "menu": "Motor",
-      "titulo": "Motor de combustión",
-      "icono": "🔥",
-      "seo_titulo": "Motor de combustión interactivo: simulador de montaje y funcionamiento",
-      "resumen": "Cómo funciona y cómo se monta un motor de combustión: simulador de montaje pieza a pieza y ciclo de cuatro tiempos.",
-      "intro": "El motor de combustión para verlo y montarlo: un simulador de montaje pieza a pieza, en el orden correcto, y el ciclo de cuatro tiempos con pistón, biela, cigüeñal y distribución. Aquí irán llegando los simuladores que acompañan a los vídeos del canal."
-    },
-    {
       "id": "mecanica",
       "menu": "Mecánica",
       "titulo": "Mecánica",
       "icono": "🔧",
-      "seo_titulo": "Mecánica de taller interactiva: herramientas y ejercicios",
-      "resumen": "Fundamentos de mecánica de taller con herramientas y ejercicios interactivos.",
-      "intro": "Herramientas, conceptos y ejercicios de mecánica de taller y del automóvil, explicados paso a paso y con práctica interactiva."
+      "seo_titulo": "Mecánica del automóvil interactiva: motor de combustión, despiece y montaje",
+      "resumen": "Mecánica del automóvil con simuladores interactivos: el motor de combustión en 3D, su despiece, montaje y averías, y más sistemas del vehículo.",
+      "intro": "Mecánica del automóvil para verla y practicarla. Empezamos por el motor de combustión: un taller 3D del motor de gasolina de cuatro tiempos para explorar sus piezas, montarlo en el orden correcto y diagnosticar averías. Irán llegando más sistemas del vehículo con los vídeos del canal."
     },
     {
       "id": "electricidad",
@@ -208,7 +209,7 @@
     },
     {
       "id": "taller-motor",
-      "seccion": "motor",
+      "seccion": "mecanica",
       "titulo": "Taller 3D del motor",
       "seo_titulo": "Taller 3D del motor: despiece, montaje y averías del motor de combustión",
       "seo_descripcion": "Simulador 3D del motor de combustión: explora sus 12 piezas, móntalo en el orden correcto y diagnostica averías reales de taller como la junta de culata o la correa de distribución.",

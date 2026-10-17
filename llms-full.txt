@@ -80,9 +80,9 @@ Ejemplo: Si el cilindro marca 7,5 mm, el tambor 23 y coincide la raya 4 del noni
 
 **¿Cómo se lee el nonio del micrómetro?** Se busca la única raya del nonio que coincide exactamente con una raya del tambor. Su número son las milésimas que hay que sumar a la lectura de cilindro y tambor.
 
-## Motor de combustión
+## Mecánica
 
-El motor de combustión para verlo y montarlo: un simulador de montaje pieza a pieza, en el orden correcto, y el ciclo de cuatro tiempos con pistón, biela, cigüeñal y distribución. Aquí irán llegando los simuladores que acompañan a los vídeos del canal.
+Mecánica del automóvil para verla y practicarla. Empezamos por el motor de combustión: un taller 3D del motor de gasolina de cuatro tiempos para explorar sus piezas, montarlo en el orden correcto y diagnosticar averías. Irán llegando más sistemas del vehículo con los vídeos del canal.
 
 ### Taller 3D del motor
 
