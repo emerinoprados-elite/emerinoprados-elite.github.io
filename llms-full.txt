@@ -90,7 +90,7 @@ URL: https://emerinoprados-elite.github.io/taller-motor/
 
 Simulador 3D gratuito del motor de combustión: explora sus 12 piezas, móntalo en el orden correcto y diagnostica averías reales de taller como la junta de culata o la correa de distribución.
 
-El Taller 3D del motor es un simulador de un motor de combustión de cuatro cilindros en línea con doble árbol de levas (DOHC). Se ve funcionar el ciclo de cuatro tiempos en cada cilindro (admisión, compresión, explosión y escape) y se pueden estudiar sus 12 piezas principales: bloque, culata, junta de culata, cárter, cigüeñal, pistones, segmentos, bielas, volante de inercia, árbol de levas, válvulas y correa de distribución. De cada pieza explica qué hace, cómo es y qué precauciones de seguridad hay que tomar en el taller.
+El Taller 3D del motor es un simulador de un motor de gasolina de cuatro tiempos y cuatro cilindros en línea con doble árbol de levas (DOHC). Se ve funcionar el ciclo de cuatro tiempos en cada cilindro (admisión, compresión, explosión y escape) y se pueden estudiar sus 12 piezas principales: bloque, culata, junta de culata, cárter, cigüeñal, pistones, segmentos, bielas, volante de inercia, árbol de levas, válvulas y correa de distribución. De cada pieza explica qué hace, cómo es y qué precauciones de seguridad hay que tomar en el taller.
 
 Cómo se lee:
 1. Explorar: arrastra para girar el motor, pellizca para acercarlo y toca una pieza para ver su función, sus datos técnicos y los riesgos al manipularla. Usa Despiece para separar las piezas y Rayos X para ver el bloque por dentro.
