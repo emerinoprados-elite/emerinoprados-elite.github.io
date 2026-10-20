@@ -162,3 +162,4 @@ a.tarjeta.sec:hover{transform:translateY(-3px);border-color:var(--naranja)}
 .incluye li{display:flex;gap:10px;align-items:baseline}
 .incluye li span{font-size:20px;flex:none}
 .pasos-compra li{margin-bottom:8px}
+.prox{display:inline-block;vertical-align:middle;margin-left:8px;font-size:13px;font-weight:800;padding:4px 12px;border-radius:999px;background:var(--panel2);border:1px solid var(--borde);color:var(--texto2)}

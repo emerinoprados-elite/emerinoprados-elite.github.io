@@ -202,7 +202,7 @@ def portada():
     tarjetas_sec = "\n".join(f'''<a class="tarjeta sec" href="{s["id"]}/">
   <h3><span class="em" aria-hidden="true">{s["icono"]}</span>{e(s["titulo"])}</h3>
   <p>{e(s["resumen"])}</p>
-  <span class="estado{" listo" if items_de(s["id"]) or s["id"] == "cursos" else ""}">{"📘 Libro + curso" if s["id"] == "cursos" else f"{len(items_de(s['id']))} disponibles" if items_de(s["id"]) else "Próximamente"}</span>
+  <span class="estado{" listo" if items_de(s["id"]) else ""}">{"Próximamente" if s["id"] == "cursos" else f"{len(items_de(s['id']))} disponibles" if items_de(s["id"]) else "Próximamente"}</span>
 </a>''' for s in SECCIONES)
     cuerpo = f'''  <section class="heroe">
     <div>
@@ -318,9 +318,10 @@ INCLUYE = [("📘", "Libro impreso", "Te lo envío a casa en papel, listo para e
 
 OFERTA_LIBRO = f'''<div class="oferta">
       <div class="oferta-txt">
-        <h2>📘 Libro + Curso online</h2>
+        <h2>📘 Libro + Curso online <span class="prox">Próximamente</span></h2>
         <p>Un libro impreso que te llega a casa con tu acceso personal a la plataforma del curso en Moodle.</p>
         <ul class="incluye">{"".join(f"<li><span aria-hidden='true'>{ic}</span><b>{t}.</b> {x}</li>" for ic, t, x in INCLUYE)}</ul>
+        <p class="aviso">🛠️ <b>En preparación.</b> Los libros y la plataforma del curso estarán disponibles muy pronto. Ya puedes ver las condiciones y escribirme para que te avise.</p>
         <div class="botones"><a class="btn prim" href="../contacto/">📩 Contacto y condiciones de compra</a></div>
       </div>
     </div>'''
@@ -341,6 +342,7 @@ def pagina_contacto():
   <section class="seccion texto" style="margin-top:4px">
     <h1 class="titular">Contacto y <span class="grad">condiciones de compra</span></h1>
     <p>El <b>Libro + Curso online</b> es un libro impreso que te envío a casa con el acceso a su curso en la plataforma Moodle.</p>
+    <p class="aviso">🛠️ <b>Próximamente.</b> Los libros y la plataforma están en preparación. Si te interesa, escríbeme y te aviso en cuanto estén disponibles, con el precio.</p>
     <h2>Qué incluye</h2>
     <ul class="incluye">{"".join(f"<li><span aria-hidden='true'>{ic}</span><b>{t}.</b> {x}</li>" for ic, t, x in INCLUYE)}</ul>
     <h2>Cómo comprarlo</h2>

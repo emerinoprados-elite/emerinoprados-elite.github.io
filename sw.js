@@ -1,6 +1,6 @@
 /* Service worker: guarda la web para usarla sin conexión.
    VERSION y ARCHIVOS los actualiza herramientas/generar.py: así los móviles descargan lo nuevo. */
-const VERSION = "em-52382b0c";
+const VERSION = "em-2e80feed";
 const ARCHIVOS = [
   "./", "cursos/", "instrumentos/", "averias/",
   "mecanica/", "electricidad/", "electricos/", "hibridos/",
