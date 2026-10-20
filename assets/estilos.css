@@ -73,6 +73,10 @@ h1,h2,h3{line-height:1.2}
 .etiquetas span{font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--borde);color:var(--texto2)}
 .video{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vista{position:relative;display:block;width:100%;aspect-ratio:2/1;border-radius:12px;overflow:hidden;background:#262a33;border:1px solid rgba(255,255,255,.08)}
+.vista img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .25s}
+.vista:hover img,.vista:focus-visible img{transform:scale(1.04)}
+.vista-btn{position:absolute;right:10px;bottom:10px;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,#ff7a18,#ff4d4d);color:#fff;font-weight:700;font-size:.85rem;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 .aviso{background:var(--panel);border:1px dashed var(--borde);border-radius:14px;padding:14px 16px;color:var(--texto2);font-size:15px}
 .texto{max-width:70ch}
 .texto p{margin:0 0 14px}

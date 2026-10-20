@@ -161,7 +161,12 @@ def tarjeta(i, r, con_video=False):
     s = SEC[i["seccion"]]
     vid = id_video(i.get("video"))
     video = ""
-    if con_video and vid:
+    vista = RAIZ / "assets" / "vistas" / f'{i["id"]}.webp'
+    if con_video == "vista" and vista.exists():
+        video = (f'<a class="vista" href="{r}{i["archivo"]}" aria-label="Practicar con {e(i["titulo"])}">'
+                 f'<img src="{r}assets/vistas/{i["id"]}.webp" alt="Simulador: {e(i["titulo"])}" loading="lazy">'
+                 f'<span class="vista-btn">▶ Practica ahora</span></a>')
+    elif con_video and vid:
         video = (f'<div class="video"><iframe loading="lazy" title="Vídeo: {e(i["titulo"])}" '
                  f'src="https://www.youtube-nocookie.com/embed/{vid}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>')
     boton_v = (f'<a class="btn yt" href="{e(i["video"])}" target="_blank" rel="noopener">{ICONO_YT} Ver el vídeo</a>' if i.get("video")
@@ -220,7 +225,7 @@ def portada():
   <section class="seccion">
     <h2>Lo último para practicar</h2>
     <p>Cada simulador tiene modo libre para aprender y modo reto para ponerte a prueba.</p>
-    {rejilla(ITEMS[-6:][::-1], "")}
+    {rejilla(ITEMS[-6:][::-1], "", "vista")}
   </section>
 
   <section class="franja">
@@ -279,7 +284,7 @@ def pagina_seccion(s):
     url = WEB + s["id"] + "/"
     apps = [i for i in items if i.get("pantalla_completa")]
     resto = [i for i in items if not i.get("pantalla_completa")]
-    contenido = ("".join(incrustado(i) for i in apps) + (rejilla(resto, "../", con_video=True) if resto else "")) if items else proximamente(s)
+    contenido = ("".join(incrustado(i) for i in apps) + (rejilla(resto, "../", con_video="vista") if resto else "")) if items else proximamente(s)
     extra = ""
     if s["id"] == "juegos":
         extra = f'''
