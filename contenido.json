@@ -1,6 +1,7 @@
 {
   "web": "https://emerinoprados-elite.github.io/",
   "canal": "https://www.youtube.com/channel/UCbV5IvL8QP6eIf52zjU3dcQ",
+  "correo": "emerinoprados@gmail.com",
   "verificacion_google": "",
   "verificacion_bing": "",
   "autor": {
@@ -12,12 +13,11 @@
     {
       "id": "cursos",
       "menu": "Cursos",
-      "titulo": "Cursos online",
+      "titulo": "Libro + Curso online",
       "icono": "🎓",
-      "seo_titulo": "Cursos online de mecánica, electricidad y vehículos eléctricos",
-      "resumen": "Cursos online de mecánica, electricidad del automóvil, vehículos eléctricos, híbridos y ADAS, con documentación, simuladores, autoevaluación y seguimiento del progreso.",
-      "intro": "Cursos online completos para aprender mecánica y electricidad del automóvil paso a paso: vídeos explicativos, documentación descargable, simuladores interactivos para practicar, autoevaluación al final de cada tema y seguimiento de tu progreso.",
-      "proximo": "Los primeros cursos están en preparación. Suscríbete al canal para enterarte el primero cuando abran."
+      "seo_titulo": "Libro impreso + curso online de mecánica y electricidad del automóvil",
+      "resumen": "Libro impreso de mecánica y electricidad del automóvil con acceso a su curso online en Moodle: vídeos, autoevaluaciones, medallas y diploma.",
+      "intro": "Cada libro impreso incluye el acceso a su curso online en la plataforma Moodle. Estudias con el libro en la mano y practicas en la plataforma con vídeos explicativos, autoevaluaciones al final de cada tema, medallas según avanzas y un diploma al terminar."
     },
     {
       "id": "instrumentos",

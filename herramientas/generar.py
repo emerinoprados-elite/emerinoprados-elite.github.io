@@ -12,6 +12,7 @@ ejecutar JavaScript.
 """
 import hashlib, html, json, re, datetime
 from pathlib import Path
+from urllib.parse import quote
 
 RAIZ = Path(__file__).resolve().parent.parent
 HERR = RAIZ / "herramientas"
@@ -19,6 +20,7 @@ D = json.loads((RAIZ / "contenido.json").read_text(encoding="utf-8"))
 WEB = D["web"].rstrip("/") + "/"
 CANAL = D.get("canal", "")
 SUSCRIBIR = CANAL.rstrip("/") + "?sub_confirmation=1" if CANAL else ""
+CORREO = D.get("correo", "")
 AUTOR = D["autor"]["nombre"]
 LEMA = "La élite se construye día a día"
 SECCIONES = D["secciones"]
@@ -58,7 +60,7 @@ def og_imagen(clave):
 
 def menu(actual, r):
     enlaces = [("", "Inicio")] + [(s["id"] + "/", s["menu"]) for s in SECCIONES] + \
-              [("videos/", "Vídeos"), ("sobre-mi/", "Sobre mí")]
+              [("videos/", "Vídeos"), ("sobre-mi/", "Sobre mí"), ("contacto/", "Contacto")]
     a = "".join(f'<a href="{r}{u or "./"}"{" aria-current=\"page\"" if u == actual else ""}>{t}</a>' for u, t in enlaces)
     return f'''<header class="cab">
   <a class="logo" href="{r or './'}">
@@ -200,7 +202,7 @@ def portada():
     tarjetas_sec = "\n".join(f'''<a class="tarjeta sec" href="{s["id"]}/">
   <h3><span class="em" aria-hidden="true">{s["icono"]}</span>{e(s["titulo"])}</h3>
   <p>{e(s["resumen"])}</p>
-  <span class="estado{" listo" if items_de(s["id"]) else ""}">{f"{len(items_de(s['id']))} disponibles" if items_de(s["id"]) else "Próximamente"}</span>
+  <span class="estado{" listo" if items_de(s["id"]) or s["id"] == "cursos" else ""}">{"📘 Libro + curso" if s["id"] == "cursos" else f"{len(items_de(s['id']))} disponibles" if items_de(s["id"]) else "Próximamente"}</span>
 </a>''' for s in SECCIONES)
     cuerpo = f'''  <section class="heroe">
     <div>
@@ -209,7 +211,7 @@ def portada():
       <p>Simuladores interactivos, vídeos explicativos y cursos online del profesor {AUTOR} para aprender mecánica, electricidad, vehículos eléctricos e híbridos y sistemas ADAS. Sin registro y desde el móvil en el taller o el ordenador en casa.</p>
       <div class="botones">
         <a class="btn prim" href="instrumentos/">📏 Probar los simuladores</a>
-        <a class="btn" href="cursos/">🎓 Ver los cursos</a>
+        <a class="btn" href="cursos/">📘 Libro + Curso online</a>
         {yt("yt", "Ver el canal")}
       </div>
     </div>
@@ -220,12 +222,6 @@ def portada():
     <h2>Secciones</h2>
     <p>Elige qué quieres aprender. Cada sección crece con los vídeos del canal.</p>
     <div class="rejilla">{tarjetas_sec}</div>
-  </section>
-
-  <section class="seccion">
-    <h2>Lo último para practicar</h2>
-    <p>Cada simulador tiene modo libre para aprender y modo reto para ponerte a prueba.</p>
-    {rejilla(ITEMS[-6:][::-1], "", "vista")}
   </section>
 
   <section class="franja">
@@ -286,6 +282,8 @@ def pagina_seccion(s):
     resto = [i for i in items if not i.get("pantalla_completa")]
     contenido = ("".join(incrustado(i) for i in apps) + (rejilla(resto, "../", con_video="vista") if resto else "")) if items else proximamente(s)
     extra = ""
+    if s["id"] == "cursos":
+        contenido = OFERTA_LIBRO
     if s["id"] == "juegos":
         extra = f'''
   <section class="franja">
@@ -309,7 +307,65 @@ def pagina_seccion(s):
                             "isPartOf": {"@id": ID_WEB}, "author": {"@id": ID_AUTOR}, "inLanguage": "es",
                             **({"mainEntity": lista_items(items)} if items else {})},
                            migas([("Inicio", WEB), (s["titulo"], url)])]
-    pagina(ruta, f'{s["seo_titulo"]} · {AUTOR}', s["resumen"], cuerpo, s["id"] + "/", grafo, indexar=bool(items))
+    pagina(ruta, f'{s["seo_titulo"]} · {AUTOR}', s["resumen"], cuerpo, s["id"] + "/", grafo, indexar=bool(items) or s["id"] == "cursos")
+
+
+INCLUYE = [("📘", "Libro impreso", "Te lo envío a casa en papel, listo para estudiar y subrayar."),
+           ("🎬", "Vídeos explicativos", "Cada tema explicado paso a paso en la plataforma."),
+           ("📝", "Autoevaluaciones", "Un test al final de cada tema para comprobar lo que sabes."),
+           ("🏅", "Medallas", "Las vas ganando según avanzas en el curso."),
+           ("🎓", "Diploma", "Al terminar el curso.")]
+
+OFERTA_LIBRO = f'''<div class="oferta">
+      <div class="oferta-txt">
+        <h2>📘 Libro + Curso online</h2>
+        <p>Un libro impreso que te llega a casa con tu acceso personal a la plataforma del curso en Moodle.</p>
+        <ul class="incluye">{"".join(f"<li><span aria-hidden='true'>{ic}</span><b>{t}.</b> {x}</li>" for ic, t, x in INCLUYE)}</ul>
+        <div class="botones"><a class="btn prim" href="../contacto/">📩 Contacto y condiciones de compra</a></div>
+      </div>
+    </div>'''
+
+
+def pagina_contacto():
+    asunto = "Libro + Curso online: solicitud de precio"
+    texto = ("Hola, Eduardo:\n\nMe interesa el Libro + Curso online. ¿Me puedes decir el precio?\n\n"
+             "Nombre:\nCurso o tema que me interesa:\nProvincia (para el envío):\n\nGracias.")
+    mailto = f"mailto:{CORREO}?subject={quote(asunto)}&body={quote(texto)}"
+    pasos = [("Pide el precio por correo", "Pulsa el botón y envíame el correo que se abre ya escrito, con tu nombre, el curso que te interesa y tu provincia."),
+             ("Te respondo con el precio", "Te contesto con el precio del libro con el curso y el enlace al anuncio en Wallapop."),
+             ("Pagas a través de Wallapop", "Compras el libro en Wallapop con su envío. Wallapop guarda el pago hasta que confirmas que lo has recibido."),
+             ("Te envío el libro impreso", "Te llega a casa junto con tus datos de acceso a la plataforma."),
+             ("Empiezas el curso", "Entras en la plataforma Moodle y tienes los vídeos, las autoevaluaciones, las medallas y el diploma.")]
+    lista = "".join(f"<li><b>{e(a)}.</b> {e(b)}</li>" for a, b in pasos)
+    cuerpo = f'''  <nav class="migas" aria-label="Estás en"><a href="../">Inicio</a> › <a href="../cursos/">Libro + Curso online</a> › <span>Contacto</span></nav>
+  <section class="seccion texto" style="margin-top:4px">
+    <h1 class="titular">Contacto y <span class="grad">condiciones de compra</span></h1>
+    <p>El <b>Libro + Curso online</b> es un libro impreso que te envío a casa con el acceso a su curso en la plataforma Moodle.</p>
+    <h2>Qué incluye</h2>
+    <ul class="incluye">{"".join(f"<li><span aria-hidden='true'>{ic}</span><b>{t}.</b> {x}</li>" for ic, t, x in INCLUYE)}</ul>
+    <h2>Cómo comprarlo</h2>
+    <ol class="pasos-compra">{lista}</ol>
+    <h2>Condiciones</h2>
+    <ul>
+      <li>El precio se consulta por correo: te lo envío sin compromiso.</li>
+      <li>El pago se hace solo a través de Wallapop, con su sistema de envío.</li>
+      <li>El acceso a la plataforma se activa cuando recibes el libro.</li>
+      <li>El acceso es personal: es para quien compra el libro.</li>
+    </ul>
+    <div class="franja" style="margin-top:26px">
+      <div><h2>📩 Pide el precio</h2><p>Escríbeme a <a href="mailto:{e(CORREO)}">{e(CORREO)}</a> y te respondo con el precio y el enlace de Wallapop.</p></div>
+      <a class="btn prim" href="{e(mailto)}">📩 Solicitar precio por correo</a>
+    </div>
+    <p style="margin-top:22px">¿Tienes una duda sobre los vídeos o los simuladores? Escríbela en los comentarios del canal: leo todos.</p>
+    <div class="botones">{yt("yt", "Ir al canal")}</div>
+  </section>'''
+    url = WEB + "contacto/"
+    grafo = nodos_base() + [{"@type": "ContactPage", "@id": url, "url": url, "name": "Contacto y condiciones de compra",
+                            "isPartOf": {"@id": ID_WEB}, "inLanguage": "es"},
+                           migas([("Inicio", WEB), ("Libro + Curso online", WEB + "cursos/"), ("Contacto", url)])]
+    pagina("contacto/index.html", f"Contacto y condiciones de compra del Libro + Curso online · {AUTOR}",
+           f"Cómo comprar el libro impreso con acceso al curso online de {AUTOR}: precio por correo, pago a través de Wallapop y acceso a Moodle con vídeos, autoevaluaciones, medallas y diploma.",
+           cuerpo, "contacto/", grafo)
 
 
 def pagina_videos():
@@ -573,6 +629,7 @@ if __name__ == "__main__":
     for s in SECCIONES:
         pagina_seccion(s)
     pagina_videos()
+    pagina_contacto()
     pagina_fija("progreso", "Mi progreso", f"Tu nivel, tus insignias y tu racha diaria en los retos de {AUTOR}.",
                 scripts=("assets/juego.js", "assets/progreso.js"), indexar=False)
     pagina_fija("sobre-mi", "Sobre mí", f"Quién es {AUTOR}, por qué hace estos simuladores de mecánica y electricidad y cómo contactar.")

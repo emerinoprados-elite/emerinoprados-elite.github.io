@@ -26,7 +26,7 @@ Mecánica del automóvil con simuladores interactivos: el motor de combustión e
 
 ## Próximamente
 
-Cursos online, Simulador de averías, Electricidad, Vehículos eléctricos, Vehículos híbridos, Sistemas ADAS: en preparación, con sus vídeos.
+Libro + Curso online, Simulador de averías, Electricidad, Vehículos eléctricos, Vehículos híbridos, Sistemas ADAS: en preparación, con sus vídeos.
 
 ## Opcional
 

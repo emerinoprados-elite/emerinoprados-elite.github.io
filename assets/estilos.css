@@ -155,3 +155,10 @@ a.tarjeta.sec:hover{transform:translateY(-3px);border-color:var(--naranja)}
 .guia-sec summary{font-weight:700;cursor:pointer}
 .guia-sec .ej{background:var(--panel);border-left:4px solid var(--naranja);border-radius:12px;padding:12px 14px}
 @media (max-width:760px){.incrustado .marco{height:78vh;border-radius:12px}}
+
+.oferta{margin-top:18px;background:var(--panel);border:1px solid var(--borde);border-radius:20px;padding:24px;border-left:5px solid #ff7a18}
+.oferta h2{margin:0 0 6px}
+.incluye{list-style:none;padding:0;margin:14px 0;display:grid;gap:10px}
+.incluye li{display:flex;gap:10px;align-items:baseline}
+.incluye li span{font-size:20px;flex:none}
+.pasos-compra li{margin-bottom:8px}
