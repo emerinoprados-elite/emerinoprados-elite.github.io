@@ -256,11 +256,12 @@ def incrustado(i):
     g = i["guia"]
     pasos = "".join(f"<li>{e(p)}</li>" for p in g.get("pasos", []))
     faq = "".join(f"<details><summary>{e(q['p'])}</summary><p>{e(q['r'])}</p></details>" for q in g.get("preguntas", []))
+    boton_v = (f' <a class="btn yt" href="{e(i["video"])}" target="_blank" rel="noopener">{ICONO_YT} Ver el vídeo</a>' if i.get("video") else "")
     return f'''<section class="seccion incrustado">
     <h2>{i.get("icono", "")} {e(i["titulo"])}</h2>
     <p>{e(i["descripcion"])}</p>
     <div class="marco"><iframe src="../{i["archivo"]}" title="{e(i["titulo"])}" loading="lazy" allow="fullscreen"></iframe></div>
-    <div class="botones"><a class="btn prim" href="../{i["archivo"]}">⛶ Abrir a pantalla completa</a></div>
+    <div class="botones"><a class="btn prim" href="../{i["archivo"]}">⛶ Abrir a pantalla completa</a>{boton_v}</div>
   </section>
   <section class="seccion texto guia-sec">
     <h2>{e(i["titulo"])}: qué es y cómo se usa</h2>

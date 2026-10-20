@@ -1,23 +1,23 @@
 {
  "index.html": {
-  "hash": "4da025ab77d6",
-  "fecha": "2026-10-17"
+  "hash": "08f68bb66711",
+  "fecha": "2026-10-20"
  },
  "cursos/index.html": {
   "hash": "ab381fa68c16",
   "fecha": "2026-10-17"
  },
  "instrumentos/index.html": {
-  "hash": "8a3de9036e85",
-  "fecha": "2026-10-17"
+  "hash": "5729118495df",
+  "fecha": "2026-10-20"
  },
  "averias/index.html": {
   "hash": "efde53e80776",
   "fecha": "2026-10-17"
  },
  "mecanica/index.html": {
-  "hash": "99a419158202",
-  "fecha": "2026-10-17"
+  "hash": "5e5f349010d4",
+  "fecha": "2026-10-20"
  },
  "electricidad/index.html": {
   "hash": "d7f45e95e4bf",
@@ -36,8 +36,8 @@
   "fecha": "2026-10-17"
  },
  "videos/index.html": {
-  "hash": "673b1ff4224a",
-  "fecha": "2026-10-17"
+  "hash": "7d5b1a2144c5",
+  "fecha": "2026-10-20"
  },
  "progreso/index.html": {
   "hash": "3c932d99ce36",
@@ -48,19 +48,19 @@
   "fecha": "2026-10-17"
  },
  "instrumentos/calibre.html": {
-  "hash": "c76a534afa78",
-  "fecha": "2026-10-17"
+  "hash": "4999b2a51b89",
+  "fecha": "2026-10-20"
  },
  "instrumentos/micrometro-centesimal.html": {
-  "hash": "f3bef6c06aad",
-  "fecha": "2026-10-17"
+  "hash": "4f34062114fe",
+  "fecha": "2026-10-20"
  },
  "instrumentos/micrometro-milesimal.html": {
-  "hash": "ce481f3a632f",
-  "fecha": "2026-10-17"
+  "hash": "638ed58d65b7",
+  "fecha": "2026-10-20"
  },
  "taller-motor/index.html": {
-  "hash": "15759b20ff88",
-  "fecha": "2026-10-17"
+  "hash": "83f6ff4146c1",
+  "fecha": "2026-10-20"
  }
 }

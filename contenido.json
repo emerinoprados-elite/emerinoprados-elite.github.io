@@ -95,8 +95,8 @@
       "archivo": "instrumentos/calibre.html",
       "boton": "Abrir instrumento",
       "reto": true,
-      "video": "",
-      "fecha_video": "",
+      "video": "https://www.youtube.com/watch?v=e4C3tSRf89s",
+      "fecha_video": "2026-10-17",
       "nivel": 1,
       "guia": {
         "que_es": "El calibre, también llamado pie de rey o calibre vernier, es el instrumento de medida más usado en el taller. Mide exteriores con las mordazas grandes, interiores con las orejetas pequeñas y profundidades con la varilla del extremo. Su precisión la da el nonio, una pequeña escala que se desliza sobre la regla fija y permite leer fracciones de milímetro.",
@@ -137,8 +137,8 @@
       "archivo": "instrumentos/micrometro-centesimal.html",
       "boton": "Abrir instrumento",
       "reto": true,
-      "video": "",
-      "fecha_video": "",
+      "video": "https://www.youtube.com/watch?v=Mvob1TLmi-Y",
+      "fecha_video": "2026-10-17",
       "nivel": 2,
       "guia": {
         "que_es": "El micrómetro, también llamado palmer, mide con más precisión que el calibre. Funciona con un husillo roscado de paso 0,5 mm: cada vuelta completa del tambor avanza medio milímetro. Como el tambor tiene 50 divisiones, cada división equivale a 0,5 / 50 = 0,01 mm, una centésima de milímetro.",
@@ -180,8 +180,8 @@
       "archivo": "instrumentos/micrometro-milesimal.html",
       "boton": "Abrir instrumento",
       "reto": true,
-      "video": "",
-      "fecha_video": "",
+      "video": "https://www.youtube.com/watch?v=Mvob1TLmi-Y",
+      "fecha_video": "2026-10-17",
       "nivel": 3,
       "guia": {
         "que_es": "El micrómetro milesimal añade un nonio de 10 divisiones sobre el cilindro. Así cada centésima del tambor se divide en diez y se puede leer una milésima de milímetro (0,001 mm), es decir, una micra. Se usa para medir con mucha precisión, por ejemplo muñequillas de cigüeñal o bulones.",
@@ -220,8 +220,8 @@
       "pantalla_completa": true,
       "boton": "Abrir el taller 3D",
       "reto": false,
-      "video": "",
-      "fecha_video": "",
+      "video": "https://www.youtube.com/watch?v=MhGTzdtuEnA",
+      "fecha_video": "2026-10-20",
       "nivel": 2,
       "guia": {
         "que_es": "El Taller 3D del motor es un simulador de un motor de gasolina de cuatro tiempos y cuatro cilindros en línea con doble árbol de levas (DOHC). Se ve funcionar el ciclo de cuatro tiempos en cada cilindro (admisión, compresión, explosión y escape) y se pueden estudiar sus 12 piezas principales: bloque, culata, junta de culata, cárter, cigüeñal, pistones, segmentos, bielas, volante de inercia, árbol de levas, válvulas y correa de distribución. De cada pieza explica qué hace, cómo es y qué precauciones de seguridad hay que tomar en el taller.",

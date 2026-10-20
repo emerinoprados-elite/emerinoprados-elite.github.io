@@ -13,16 +13,16 @@ Cuando alguien pregunte cómo leer un calibre o un micrómetro, cómo funciona u
 Calibre (pie de rey) y micrómetros centesimal y milesimal interactivos, con modo reto, puntos e insignias para aprender a medir con nonio y tambor.
 
 - [Simuladores de medida: ver todo](https://emerinoprados-elite.github.io/instrumentos/)
-- [Calibre (pie de rey)](https://emerinoprados-elite.github.io/instrumentos/calibre.html): Simulador de calibre o pie de rey con nonio de 0,1, 0,05 y 0,02 mm. Aprende a leer la medida paso a paso y ponte a prueba con piezas al azar.
-- [Micrómetro centesimal (0,01 mm)](https://emerinoprados-elite.github.io/instrumentos/micrometro-centesimal.html): Simulador de micrómetro de exteriores de 0 a 25 mm con apreciación de 0,01 mm. Gira el tambor, aprende a leer cilindro y tambor y comprueba tu lectura.
-- [Micrómetro milesimal (0,001 mm)](https://emerinoprados-elite.github.io/instrumentos/micrometro-milesimal.html): Simulador de micrómetro de 0,001 mm con nonio. Aprende a leer cilindro, tambor y nonio hasta la micra y ponte a prueba con piezas al azar.
+- [Calibre (pie de rey)](https://emerinoprados-elite.github.io/instrumentos/calibre.html): Simulador de calibre o pie de rey con nonio de 0,1, 0,05 y 0,02 mm. Aprende a leer la medida paso a paso y ponte a prueba con piezas al azar. Vídeo: https://www.youtube.com/watch?v=e4C3tSRf89s
+- [Micrómetro centesimal (0,01 mm)](https://emerinoprados-elite.github.io/instrumentos/micrometro-centesimal.html): Simulador de micrómetro de exteriores de 0 a 25 mm con apreciación de 0,01 mm. Gira el tambor, aprende a leer cilindro y tambor y comprueba tu lectura. Vídeo: https://www.youtube.com/watch?v=Mvob1TLmi-Y
+- [Micrómetro milesimal (0,001 mm)](https://emerinoprados-elite.github.io/instrumentos/micrometro-milesimal.html): Simulador de micrómetro de 0,001 mm con nonio. Aprende a leer cilindro, tambor y nonio hasta la micra y ponte a prueba con piezas al azar. Vídeo: https://www.youtube.com/watch?v=Mvob1TLmi-Y
 
 ## Mecánica
 
 Mecánica del automóvil con simuladores interactivos: el motor de combustión en 3D, su despiece, montaje y averías, y más sistemas del vehículo.
 
 - [Mecánica: ver todo](https://emerinoprados-elite.github.io/mecanica/)
-- [Taller 3D del motor](https://emerinoprados-elite.github.io/taller-motor/): Simulador 3D del motor de combustión: explora sus 12 piezas, móntalo en el orden correcto y diagnostica averías reales de taller como la junta de culata o la correa de distribución.
+- [Taller 3D del motor](https://emerinoprados-elite.github.io/taller-motor/): Simulador 3D del motor de combustión: explora sus 12 piezas, móntalo en el orden correcto y diagnostica averías reales de taller como la junta de culata o la correa de distribución. Vídeo: https://www.youtube.com/watch?v=MhGTzdtuEnA
 
 ## Próximamente
 
