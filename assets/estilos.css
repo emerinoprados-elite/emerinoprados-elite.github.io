@@ -8,14 +8,6 @@
   --sombra:0 20px 40px rgba(0,0,0,.35);
   color-scheme:dark;
 }
-@media (prefers-color-scheme:light){
-  :root:not([data-theme="dark"]){
-    --fondo:#F6F3EF; --panel:#FFFFFF; --panel2:#F1ECE6; --borde:#E2D9CF;
-    --texto:#1B1D22; --texto2:#5A6070; --lema:#C2410C;
-    --halo1:#FFE3CC; --halo2:#FFD9DC; --sombra:0 14px 30px rgba(120,60,20,.12);
-    color-scheme:light;
-  }
-}
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:radial-gradient(1200px 600px at 10% -10%,var(--halo1) 0%,transparent 60%),
