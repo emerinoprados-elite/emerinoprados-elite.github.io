@@ -283,7 +283,7 @@ def pagina_seccion(s):
     contenido = ("".join(incrustado(i) for i in apps) + (rejilla(resto, "../", con_video="vista") if resto else "")) if items else proximamente(s)
     extra = ""
     if s["id"] == "cursos":
-        contenido = OFERTA_LIBRO
+        contenido = OFERTA_LIBRO + tarjetas_cursos()
     if s["id"] == "juegos":
         extra = f'''
   <section class="franja">
@@ -325,6 +325,27 @@ OFERTA_LIBRO = f'''<div class="oferta">
         <div class="botones"><a class="btn prim" href="../contacto/">📩 Contacto y condiciones de compra</a></div>
       </div>
     </div>'''
+
+
+def tarjetas_cursos():
+    """Cursos alojados en otras webs (por ejemplo, la plataforma Moodle). Se rellenan en "cursos" de contenido.json."""
+    cursos = D.get("cursos", [])
+    if not cursos:
+        return ""
+    def boton(c):
+        if c.get("url"):
+            return f'<a class="btn prim" href="{e(c["url"])}" target="_blank" rel="noopener">Entrar al curso ↗</a>'
+        return '<span class="btn" aria-disabled="true">Enlace disponible muy pronto</span>'
+    tarjetas = "".join(f'''<article class="tarjeta">
+  <h3><span class="em" aria-hidden="true">{c.get("icono", "🎓")}</span>{e(c["titulo"])}</h3>
+  <p>{e(c["descripcion"])}</p>
+  <div class="botones">{boton(c)}</div>
+</article>''' for c in cursos)
+    return f'''
+    <section class="seccion" id="mis-cursos">
+      <h2>Mis cursos</h2>
+      <div class="rejilla">{tarjetas}</div>
+    </section>'''
 
 
 def pagina_contacto():

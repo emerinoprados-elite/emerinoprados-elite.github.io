@@ -255,5 +255,14 @@
         ]
       }
     }
+  ],
+  "cursos": [
+    {
+      "id": "curso-online",
+      "titulo": "Acceso al curso online",
+      "icono": "🎓",
+      "descripcion": "Si ya tienes tu Libro + Curso online, entra aquí a la plataforma del curso con tu usuario y contraseña.",
+      "url": ""
+    }
   ]
 }
