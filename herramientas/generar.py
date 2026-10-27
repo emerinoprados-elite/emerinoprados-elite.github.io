@@ -321,8 +321,8 @@ OFERTA_LIBRO = f'''<div class="oferta">
         <h2>📘 Libro + Curso online <span class="prox">Próximamente</span></h2>
         <p>Un libro impreso que te llega a casa con tu acceso personal a la plataforma del curso en Moodle.</p>
         <ul class="incluye">{"".join(f"<li><span aria-hidden='true'>{ic}</span><b>{t}.</b> {x}</li>" for ic, t, x in INCLUYE)}</ul>
-        <p class="aviso">🛠️ <b>En preparación.</b> Los libros y la plataforma del curso estarán disponibles muy pronto. Ya puedes ver las condiciones y escribirme para que te avise.</p>
-        <div class="botones"><a class="btn prim" href="../contacto/">📩 Contacto y condiciones de compra</a></div>
+        <p class="aviso">🛠️ <b>En preparación.</b> Los libros y la plataforma del curso estarán disponibles muy pronto. Si te interesa, escríbeme y te aviso en cuanto estén disponibles.</p>
+        <div class="botones"><a class="btn prim" href="../contacto/">📩 Contacto</a></div>
       </div>
     </div>'''
 
@@ -349,45 +349,19 @@ def tarjetas_cursos():
 
 
 def pagina_contacto():
-    asunto = "Libro + Curso online: solicitud de precio"
-    texto = ("Hola, Eduardo:\n\nMe interesa el Libro + Curso online. ¿Me puedes decir el precio?\n\n"
-             "Nombre:\nCurso o tema que me interesa:\nProvincia (para el envío):\n\nGracias.")
-    mailto = f"mailto:{CORREO}?subject={quote(asunto)}&body={quote(texto)}"
-    pasos = [("Pide el precio por correo", "Pulsa el botón y envíame el correo que se abre ya escrito, con tu nombre, el curso que te interesa y tu provincia."),
-             ("Te respondo con el precio", "Te contesto con el precio del libro con el curso y el enlace al anuncio en Wallapop."),
-             ("Pagas a través de Wallapop", "Compras el libro en Wallapop con su envío. Wallapop guarda el pago hasta que confirmas que lo has recibido."),
-             ("Te envío el libro impreso", "Te llega a casa junto con tus datos de acceso a la plataforma."),
-             ("Empiezas el curso", "Entras en la plataforma Moodle y tienes los vídeos, las autoevaluaciones, las medallas y el diploma.")]
-    lista = "".join(f"<li><b>{e(a)}.</b> {e(b)}</li>" for a, b in pasos)
-    cuerpo = f'''  <nav class="migas" aria-label="Estás en"><a href="../">Inicio</a> › <a href="../cursos/">Libro + Curso online</a> › <span>Contacto</span></nav>
+    cuerpo = f'''  <nav class="migas" aria-label="Estás en"><a href="../">Inicio</a> › <span>Contacto</span></nav>
   <section class="seccion texto" style="margin-top:4px">
-    <h1 class="titular">Contacto y <span class="grad">condiciones de compra</span></h1>
-    <p>El <b>Libro + Curso online</b> es un libro impreso que te envío a casa con el acceso a su curso en la plataforma Moodle.</p>
-    <p class="aviso">🛠️ <b>Próximamente.</b> Los libros y la plataforma están en preparación. Si te interesa, escríbeme y te aviso en cuanto estén disponibles, con el precio.</p>
-    <h2>Qué incluye</h2>
-    <ul class="incluye">{"".join(f"<li><span aria-hidden='true'>{ic}</span><b>{t}.</b> {x}</li>" for ic, t, x in INCLUYE)}</ul>
-    <h2>Cómo comprarlo</h2>
-    <ol class="pasos-compra">{lista}</ol>
-    <h2>Condiciones</h2>
-    <ul>
-      <li>El precio se consulta por correo: te lo envío sin compromiso.</li>
-      <li>El pago se hace solo a través de Wallapop, con su sistema de envío.</li>
-      <li>El acceso a la plataforma se activa cuando recibes el libro.</li>
-      <li>El acceso es personal: es para quien compra el libro.</li>
-    </ul>
-    <div class="franja" style="margin-top:26px">
-      <div><h2>📩 Pide el precio</h2><p>Escríbeme a <a href="mailto:{e(CORREO)}">{e(CORREO)}</a> y te respondo con el precio y el enlace de Wallapop.</p></div>
-      <a class="btn prim" href="{e(mailto)}">📩 Solicitar precio por correo</a>
-    </div>
-    <p style="margin-top:22px">¿Tienes una duda sobre los vídeos o los simuladores? Escríbela en los comentarios del canal: leo todos.</p>
-    <div class="botones">{yt("yt", "Ir al canal")}</div>
+    <h1 class="titular">Contacto</h1>
+    <p>Si quieres preguntarme algo sobre los cursos, los simuladores o los vídeos, escríbeme a <a href="mailto:{e(CORREO)}">{e(CORREO)}</a>.</p>
+    <p>Las dudas sobre un vídeo o un simulador también puedes dejarlas en los comentarios del canal: leo todos.</p>
+    <div class="botones"><a class="btn prim" href="mailto:{e(CORREO)}">📩 Escribir un correo</a>{yt("yt", "Ir al canal")}</div>
   </section>'''
     url = WEB + "contacto/"
-    grafo = nodos_base() + [{"@type": "ContactPage", "@id": url, "url": url, "name": "Contacto y condiciones de compra",
+    grafo = nodos_base() + [{"@type": "ContactPage", "@id": url, "url": url, "name": "Contacto",
                             "isPartOf": {"@id": ID_WEB}, "inLanguage": "es"},
-                           migas([("Inicio", WEB), ("Libro + Curso online", WEB + "cursos/"), ("Contacto", url)])]
-    pagina("contacto/index.html", f"Contacto y condiciones de compra del Libro + Curso online · {AUTOR}",
-           f"Cómo comprar el libro impreso con acceso al curso online de {AUTOR}: precio por correo, pago a través de Wallapop y acceso a Moodle con vídeos, autoevaluaciones, medallas y diploma.",
+                           migas([("Inicio", WEB), ("Contacto", url)])]
+    pagina("contacto/index.html", f"Contacto · {AUTOR}",
+           f"Contacta con el {AUTOR} para dudas sobre sus cursos online, simuladores y vídeos de mecánica y electricidad del automóvil.",
            cuerpo, "contacto/", grafo)
 
 
